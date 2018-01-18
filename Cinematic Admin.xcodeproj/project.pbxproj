@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD720106DC9005142E2 /* AppDelegate.swift */; };
+		1468BCDA20106DC9005142E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD920106DC9005142E2 /* ViewController.swift */; };
+		1468BCDD20106DC9005142E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCDB20106DC9005142E2 /* Main.storyboard */; };
+		1468BCDF20106DC9005142E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCDE20106DC9005142E2 /* Assets.xcassets */; };
+		1468BCE220106DC9005142E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */; };
+		1468BCED20106DC9005142E2 /* Cinematic_AdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCEC20106DC9005142E2 /* Cinematic_AdminTests.swift */; };
+		1468BCF820106DC9005142E2 /* Cinematic_AdminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1468BCE920106DC9005142E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1468BCCC20106DC9005142E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1468BCD320106DC9005142E2;
+			remoteInfo = "Cinematic Admin";
+		};
+		1468BCF420106DC9005142E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1468BCCC20106DC9005142E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1468BCD320106DC9005142E2;
+			remoteInfo = "Cinematic Admin";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1468BCD420106DC9005142E2 /* Cinematic Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinematic Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1468BCD720106DC9005142E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1468BCD920106DC9005142E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1468BCDC20106DC9005142E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1468BCDE20106DC9005142E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1468BCE120106DC9005142E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1468BCE320106DC9005142E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1468BCE820106DC9005142E2 /* Cinematic AdminTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinematic AdminTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1468BCEC20106DC9005142E2 /* Cinematic_AdminTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinematic_AdminTests.swift; sourceTree = "<group>"; };
+		1468BCEE20106DC9005142E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1468BCF320106DC9005142E2 /* Cinematic AdminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinematic AdminUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinematic_AdminUITests.swift; sourceTree = "<group>"; };
+		1468BCF920106DC9005142E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1468BCD120106DC9005142E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCE520106DC9005142E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCF020106DC9005142E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1468BCCB20106DC9005142E2 = {
+			isa = PBXGroup;
+			children = (
+				1468BCD620106DC9005142E2 /* Cinematic Admin */,
+				1468BCEB20106DC9005142E2 /* Cinematic AdminTests */,
+				1468BCF620106DC9005142E2 /* Cinematic AdminUITests */,
+				1468BCD520106DC9005142E2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1468BCD520106DC9005142E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1468BCD420106DC9005142E2 /* Cinematic Admin.app */,
+				1468BCE820106DC9005142E2 /* Cinematic AdminTests.xctest */,
+				1468BCF320106DC9005142E2 /* Cinematic AdminUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1468BCD620106DC9005142E2 /* Cinematic Admin */ = {
+			isa = PBXGroup;
+			children = (
+				1468BCD720106DC9005142E2 /* AppDelegate.swift */,
+				1468BCD920106DC9005142E2 /* ViewController.swift */,
+				1468BCDB20106DC9005142E2 /* Main.storyboard */,
+				1468BCDE20106DC9005142E2 /* Assets.xcassets */,
+				1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */,
+				1468BCE320106DC9005142E2 /* Info.plist */,
+			);
+			path = "Cinematic Admin";
+			sourceTree = "<group>";
+		};
+		1468BCEB20106DC9005142E2 /* Cinematic AdminTests */ = {
+			isa = PBXGroup;
+			children = (
+				1468BCEC20106DC9005142E2 /* Cinematic_AdminTests.swift */,
+				1468BCEE20106DC9005142E2 /* Info.plist */,
+			);
+			path = "Cinematic AdminTests";
+			sourceTree = "<group>";
+		};
+		1468BCF620106DC9005142E2 /* Cinematic AdminUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */,
+				1468BCF920106DC9005142E2 /* Info.plist */,
+			);
+			path = "Cinematic AdminUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1468BCD320106DC9005142E2 /* Cinematic Admin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1468BCFC20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic Admin" */;
+			buildPhases = (
+				1468BCD020106DC9005142E2 /* Sources */,
+				1468BCD120106DC9005142E2 /* Frameworks */,
+				1468BCD220106DC9005142E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cinematic Admin";
+			productName = "Cinematic Admin";
+			productReference = 1468BCD420106DC9005142E2 /* Cinematic Admin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1468BCE720106DC9005142E2 /* Cinematic AdminTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1468BCFF20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminTests" */;
+			buildPhases = (
+				1468BCE420106DC9005142E2 /* Sources */,
+				1468BCE520106DC9005142E2 /* Frameworks */,
+				1468BCE620106DC9005142E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1468BCEA20106DC9005142E2 /* PBXTargetDependency */,
+			);
+			name = "Cinematic AdminTests";
+			productName = "Cinematic AdminTests";
+			productReference = 1468BCE820106DC9005142E2 /* Cinematic AdminTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1468BCF220106DC9005142E2 /* Cinematic AdminUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1468BD0220106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminUITests" */;
+			buildPhases = (
+				1468BCEF20106DC9005142E2 /* Sources */,
+				1468BCF020106DC9005142E2 /* Frameworks */,
+				1468BCF120106DC9005142E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1468BCF520106DC9005142E2 /* PBXTargetDependency */,
+			);
+			name = "Cinematic AdminUITests";
+			productName = "Cinematic AdminUITests";
+			productReference = 1468BCF320106DC9005142E2 /* Cinematic AdminUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1468BCCC20106DC9005142E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Khant Zaw Ko";
+				TargetAttributes = {
+					1468BCD320106DC9005142E2 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					1468BCE720106DC9005142E2 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1468BCD320106DC9005142E2;
+					};
+					1468BCF220106DC9005142E2 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1468BCD320106DC9005142E2;
+					};
+				};
+			};
+			buildConfigurationList = 1468BCCF20106DC9005142E2 /* Build configuration list for PBXProject "Cinematic Admin" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1468BCCB20106DC9005142E2;
+			productRefGroup = 1468BCD520106DC9005142E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1468BCD320106DC9005142E2 /* Cinematic Admin */,
+				1468BCE720106DC9005142E2 /* Cinematic AdminTests */,
+				1468BCF220106DC9005142E2 /* Cinematic AdminUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1468BCD220106DC9005142E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1468BCE220106DC9005142E2 /* LaunchScreen.storyboard in Resources */,
+				1468BCDF20106DC9005142E2 /* Assets.xcassets in Resources */,
+				1468BCDD20106DC9005142E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCE620106DC9005142E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCF120106DC9005142E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1468BCD020106DC9005142E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1468BCDA20106DC9005142E2 /* ViewController.swift in Sources */,
+				1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCE420106DC9005142E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1468BCED20106DC9005142E2 /* Cinematic_AdminTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1468BCEF20106DC9005142E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1468BCF820106DC9005142E2 /* Cinematic_AdminUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1468BCEA20106DC9005142E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1468BCD320106DC9005142E2 /* Cinematic Admin */;
+			targetProxy = 1468BCE920106DC9005142E2 /* PBXContainerItemProxy */;
+		};
+		1468BCF520106DC9005142E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1468BCD320106DC9005142E2 /* Cinematic Admin */;
+			targetProxy = 1468BCF420106DC9005142E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1468BCDB20106DC9005142E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1468BCDC20106DC9005142E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1468BCE120106DC9005142E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1468BCFA20106DC9005142E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1468BCFB20106DC9005142E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1468BCFD20106DC9005142E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic Admin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-Admin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1468BCFE20106DC9005142E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic Admin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-Admin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1468BD0020106DC9005142E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic AdminTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-AdminTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinematic Admin.app/Cinematic Admin";
+			};
+			name = Debug;
+		};
+		1468BD0120106DC9005142E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic AdminTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-AdminTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cinematic Admin.app/Cinematic Admin";
+			};
+			name = Release;
+		};
+		1468BD0320106DC9005142E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic AdminUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-AdminUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cinematic Admin";
+			};
+			name = Debug;
+		};
+		1468BD0420106DC9005142E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EX9SP8QRW2;
+				INFOPLIST_FILE = "Cinematic AdminUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-AdminUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Cinematic Admin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1468BCCF20106DC9005142E2 /* Build configuration list for PBXProject "Cinematic Admin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1468BCFA20106DC9005142E2 /* Debug */,
+				1468BCFB20106DC9005142E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1468BCFC20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic Admin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1468BCFD20106DC9005142E2 /* Debug */,
+				1468BCFE20106DC9005142E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1468BCFF20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1468BD0020106DC9005142E2 /* Debug */,
+				1468BD0120106DC9005142E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1468BD0220106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1468BD0320106DC9005142E2 /* Debug */,
+				1468BD0420106DC9005142E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1468BCCC20106DC9005142E2 /* Project object */;
+}
