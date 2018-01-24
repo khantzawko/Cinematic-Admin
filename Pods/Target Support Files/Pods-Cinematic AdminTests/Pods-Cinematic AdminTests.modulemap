@@ -1,0 +1,6 @@
+framework module Pods_Cinematic_AdminTests {
+  umbrella header "Pods-Cinematic AdminTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

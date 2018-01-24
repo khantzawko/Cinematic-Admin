@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A52018675B00B8394E /* AddMovieController.swift */; };
+		1411F8A8201867B700B8394E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A7201867B700B8394E /* MovieCell.swift */; };
+		1411F8AA20187A3F00B8394E /* AddMoviePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */; };
+		1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8AB20187AA300B8394E /* PopupMovieCell.swift */; };
+		141698F520154949006F69DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 141698F420154949006F69DC /* GoogleService-Info.plist */; };
 		1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD720106DC9005142E2 /* AppDelegate.swift */; };
-		1468BCDA20106DC9005142E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD920106DC9005142E2 /* ViewController.swift */; };
 		1468BCDD20106DC9005142E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCDB20106DC9005142E2 /* Main.storyboard */; };
 		1468BCDF20106DC9005142E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCDE20106DC9005142E2 /* Assets.xcassets */; };
 		1468BCE220106DC9005142E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */; };
 		1468BCED20106DC9005142E2 /* Cinematic_AdminTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCEC20106DC9005142E2 /* Cinematic_AdminTests.swift */; };
 		1468BCF820106DC9005142E2 /* Cinematic_AdminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */; };
+		146A2F2120183A33000C8F37 /* CinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2020183A33000C8F37 /* CinemaCell.swift */; };
+		146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2220183A96000C8F37 /* TheatreCell.swift */; };
+		146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2420183B0D000C8F37 /* AddCinemaController.swift */; };
+		146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2620183B67000C8F37 /* AddTheatreController.swift */; };
+		14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieTableViewController.swift */; };
+		7BC00E542E0DD6F9A4F0D061 /* Pods_Cinematic_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C861AE371D49C6A1F3C4CFB9 /* Pods_Cinematic_Admin.framework */; };
+		A5EAE3652D2C576A69F9E792 /* Pods_Cinematic_AdminUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3862FFB75B93DFA50C2CB2F /* Pods_Cinematic_AdminUITests.framework */; };
+		E84B5A8AE72FADD94FD50926 /* Pods_Cinematic_AdminTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1411F8A52018675B00B8394E /* AddMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieController.swift; sourceTree = "<group>"; };
+		1411F8A7201867B700B8394E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoviePopupController.swift; sourceTree = "<group>"; };
+		1411F8AB20187AA300B8394E /* PopupMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMovieCell.swift; sourceTree = "<group>"; };
+		141698F420154949006F69DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1468BCD420106DC9005142E2 /* Cinematic Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinematic Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1468BCD720106DC9005142E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1468BCD920106DC9005142E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1468BCDC20106DC9005142E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1468BCDE20106DC9005142E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1468BCE120106DC9005142E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +63,20 @@
 		1468BCF320106DC9005142E2 /* Cinematic AdminUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cinematic AdminUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinematic_AdminUITests.swift; sourceTree = "<group>"; };
 		1468BCF920106DC9005142E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		146A2F2020183A33000C8F37 /* CinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaCell.swift; sourceTree = "<group>"; };
+		146A2F2220183A96000C8F37 /* TheatreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreCell.swift; sourceTree = "<group>"; };
+		146A2F2420183B0D000C8F37 /* AddCinemaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCinemaController.swift; sourceTree = "<group>"; };
+		146A2F2620183B67000C8F37 /* AddTheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTheatreController.swift; sourceTree = "<group>"; };
+		14B0A187201073D200029764 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		2A5578DCA4F3EB59D87FDAA9 /* Pods-Cinematic AdminTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinematic_AdminTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D1EBBC49F2D348E3408BDB /* Pods-Cinematic AdminUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9339D0C9D7E9764551D55557 /* Pods-Cinematic AdminUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B3862FFB75B93DFA50C2CB2F /* Pods_Cinematic_AdminUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinematic_AdminUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C352412A268CDB2B5EBC9285 /* Pods-Cinematic Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic Admin/Pods-Cinematic Admin.release.xcconfig"; sourceTree = "<group>"; };
+		C861AE371D49C6A1F3C4CFB9 /* Pods_Cinematic_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinematic_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6AEF69E8567B635C92D8279 /* Pods-Cinematic Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic Admin/Pods-Cinematic Admin.debug.xcconfig"; sourceTree = "<group>"; };
+		FB1480F8DED1F81955F7E48D /* Pods-Cinematic AdminTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC00E542E0DD6F9A4F0D061 /* Pods_Cinematic_Admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84B5A8AE72FADD94FD50926 /* Pods_Cinematic_AdminTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +100,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5EAE3652D2C576A69F9E792 /* Pods_Cinematic_AdminUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		140F44102014E93A003A20D6 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				141698F420154949006F69DC /* GoogleService-Info.plist */,
+				1468BCD720106DC9005142E2 /* AppDelegate.swift */,
+				1468BCDE20106DC9005142E2 /* Assets.xcassets */,
+				1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */,
+				1468BCE320106DC9005142E2 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		1411F8A32018461400B8394E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1411F8AB20187AA300B8394E /* PopupMovieCell.swift */,
+				1411F8A7201867B700B8394E /* MovieCell.swift */,
+				146A2F2020183A33000C8F37 /* CinemaCell.swift */,
+				146A2F2220183A96000C8F37 /* TheatreCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1411F8A42018462200B8394E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14B0A187201073D200029764 /* MovieTableViewController.swift */,
+				146A2F2420183B0D000C8F37 /* AddCinemaController.swift */,
+				146A2F2620183B67000C8F37 /* AddTheatreController.swift */,
+				1411F8A52018675B00B8394E /* AddMovieController.swift */,
+				1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1468BCCB20106DC9005142E2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +149,8 @@
 				1468BCEB20106DC9005142E2 /* Cinematic AdminTests */,
 				1468BCF620106DC9005142E2 /* Cinematic AdminUITests */,
 				1468BCD520106DC9005142E2 /* Products */,
+				FE281DE69D4B44A475CDF66C /* Pods */,
+				39D6406C1E48093C01217073 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +167,10 @@
 		1468BCD620106DC9005142E2 /* Cinematic Admin */ = {
 			isa = PBXGroup;
 			children = (
-				1468BCD720106DC9005142E2 /* AppDelegate.swift */,
-				1468BCD920106DC9005142E2 /* ViewController.swift */,
+				1411F8A42018462200B8394E /* Controllers */,
 				1468BCDB20106DC9005142E2 /* Main.storyboard */,
-				1468BCDE20106DC9005142E2 /* Assets.xcassets */,
-				1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */,
-				1468BCE320106DC9005142E2 /* Info.plist */,
+				1411F8A32018461400B8394E /* Cells */,
+				140F44102014E93A003A20D6 /* Supporting files */,
 			);
 			path = "Cinematic Admin";
 			sourceTree = "<group>";
@@ -125,6 +193,29 @@
 			path = "Cinematic AdminUITests";
 			sourceTree = "<group>";
 		};
+		39D6406C1E48093C01217073 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C861AE371D49C6A1F3C4CFB9 /* Pods_Cinematic_Admin.framework */,
+				3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */,
+				B3862FFB75B93DFA50C2CB2F /* Pods_Cinematic_AdminUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE281DE69D4B44A475CDF66C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6AEF69E8567B635C92D8279 /* Pods-Cinematic Admin.debug.xcconfig */,
+				C352412A268CDB2B5EBC9285 /* Pods-Cinematic Admin.release.xcconfig */,
+				FB1480F8DED1F81955F7E48D /* Pods-Cinematic AdminTests.debug.xcconfig */,
+				2A5578DCA4F3EB59D87FDAA9 /* Pods-Cinematic AdminTests.release.xcconfig */,
+				77D1EBBC49F2D348E3408BDB /* Pods-Cinematic AdminUITests.debug.xcconfig */,
+				9339D0C9D7E9764551D55557 /* Pods-Cinematic AdminUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1468BCFC20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic Admin" */;
 			buildPhases = (
+				DDDDD59951E615D6D93CCE88 /* [CP] Check Pods Manifest.lock */,
 				1468BCD020106DC9005142E2 /* Sources */,
 				1468BCD120106DC9005142E2 /* Frameworks */,
 				1468BCD220106DC9005142E2 /* Resources */,
+				BC83C0B14B53314351A477D5 /* [CP] Embed Pods Frameworks */,
+				1C5728B3203FB614CCC734DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1468BCFF20106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminTests" */;
 			buildPhases = (
+				BE785B54D7123BC7A7D30159 /* [CP] Check Pods Manifest.lock */,
 				1468BCE420106DC9005142E2 /* Sources */,
 				1468BCE520106DC9005142E2 /* Frameworks */,
 				1468BCE620106DC9005142E2 /* Resources */,
+				6F79FF8A06F22816F7661DCC /* [CP] Embed Pods Frameworks */,
+				C3851E36AB0722E5D5A02BAF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1468BD0220106DC9005142E2 /* Build configuration list for PBXNativeTarget "Cinematic AdminUITests" */;
 			buildPhases = (
+				C8051AE92FE14D7F6410E4C9 /* [CP] Check Pods Manifest.lock */,
 				1468BCEF20106DC9005142E2 /* Sources */,
 				1468BCF020106DC9005142E2 /* Frameworks */,
 				1468BCF120106DC9005142E2 /* Resources */,
+				F3C3BA5836C0DD6AEC122FF7 /* [CP] Embed Pods Frameworks */,
+				EC9D9F985EF81C69BA50A735 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1468BCE220106DC9005142E2 /* LaunchScreen.storyboard in Resources */,
+				141698F520154949006F69DC /* GoogleService-Info.plist in Resources */,
 				1468BCDF20106DC9005142E2 /* Assets.xcassets in Resources */,
 				1468BCDD20106DC9005142E2 /* Main.storyboard in Resources */,
 			);
@@ -254,13 +355,159 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1C5728B3203FB614CCC734DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic Admin/Pods-Cinematic Admin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F79FF8A06F22816F7661DCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC83C0B14B53314351A477D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic Admin/Pods-Cinematic Admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE785B54D7123BC7A7D30159 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3851E36AB0722E5D5A02BAF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8051AE92FE14D7F6410E4C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDDD59951E615D6D93CCE88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EC9D9F985EF81C69BA50A735 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C3BA5836C0DD6AEC122FF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1468BCD020106DC9005142E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1468BCDA20106DC9005142E2 /* ViewController.swift in Sources */,
+				146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */,
+				1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */,
+				1411F8A8201867B700B8394E /* MovieCell.swift in Sources */,
+				14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */,
+				146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */,
 				1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */,
+				146A2F2120183A33000C8F37 /* CinemaCell.swift in Sources */,
+				1411F8AA20187A3F00B8394E /* AddMoviePopupController.swift in Sources */,
+				146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */,
+				1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,36 +671,39 @@
 		};
 		1468BCFD20106DC9005142E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AEF69E8567B635C92D8279 /* Pods-Cinematic Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
-				INFOPLIST_FILE = "Cinematic Admin/Info.plist";
+				INFOPLIST_FILE = "Cinematic Admin/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.khantzawko.CinematicAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		1468BCFE20106DC9005142E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C352412A268CDB2B5EBC9285 /* Pods-Cinematic Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EX9SP8QRW2;
-				INFOPLIST_FILE = "Cinematic Admin/Info.plist";
+				INFOPLIST_FILE = "Cinematic Admin/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.khantzawko.Cinematic-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = com.khantzawko.CinematicAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		1468BD0020106DC9005142E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1480F8DED1F81955F7E48D /* Pods-Cinematic AdminTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +721,7 @@
 		};
 		1468BD0120106DC9005142E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A5578DCA4F3EB59D87FDAA9 /* Pods-Cinematic AdminTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +739,7 @@
 		};
 		1468BD0320106DC9005142E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D1EBBC49F2D348E3408BDB /* Pods-Cinematic AdminUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -504,6 +756,7 @@
 		};
 		1468BD0420106DC9005142E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9339D0C9D7E9764551D55557 /* Pods-Cinematic AdminUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
