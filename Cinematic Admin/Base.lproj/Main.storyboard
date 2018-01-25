@@ -66,7 +66,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cinemaName" destination="Qm3-sK-ijG" id="0X1-wD-hyp"/>
-                                    <segue destination="OJe-DE-HSK" kind="show" id="pcg-Oe-OM0"/>
+                                    <segue destination="OJe-DE-HSK" kind="show" identifier="ToAddTheatre" id="pcg-Oe-OM0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -119,7 +119,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="theatreName" destination="LaI-5j-AUI" id="Kax-qM-4Ai"/>
-                                    <segue destination="0Xx-xh-5pL" kind="show" id="AaR-Wf-Cud"/>
+                                    <segue destination="0Xx-xh-5pL" kind="show" identifier="ToAddMovie" id="AaR-Wf-Cud"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -156,19 +156,19 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-BV-NHB">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading" translatesAutoresizingMaskIntoConstraints="NO" id="DOj-BV-NHB">
                                             <rect key="frame" x="16" y="5" width="80" height="120"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="120" id="j6E-Kr-Vnm"/>
                                                 <constraint firstAttribute="width" constant="80" id="p7Z-nj-0Oy"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWL-9I-qgY">
-                                            <rect key="frame" x="104" y="5" width="263" height="20"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWL-9I-qgY">
+                                            <rect key="frame" x="104" y="5" width="263" height="22"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="20" id="TNF-3K-3wo"/>
+                                                <constraint firstAttribute="height" constant="22" id="TNF-3K-3wo"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -225,7 +225,7 @@
                                         <constraint firstItem="w3w-Cq-JKh" firstAttribute="top" secondItem="Bzm-v9-ge8" secondAttribute="bottom" constant="5" id="pVD-DQ-zBe"/>
                                         <constraint firstAttribute="trailing" secondItem="rCR-Qh-yyM" secondAttribute="trailing" constant="8" id="rSy-7u-fp3"/>
                                         <constraint firstAttribute="trailing" secondItem="w3w-Cq-JKh" secondAttribute="trailing" constant="8" id="sDY-Du-kHl"/>
-                                        <constraint firstItem="NYo-8L-Bjy" firstAttribute="top" secondItem="TWL-9I-qgY" secondAttribute="bottom" constant="5" id="sSs-l8-bBJ"/>
+                                        <constraint firstItem="NYo-8L-Bjy" firstAttribute="top" secondItem="TWL-9I-qgY" secondAttribute="bottom" constant="3" id="sSs-l8-bBJ"/>
                                         <constraint firstAttribute="trailing" secondItem="NYo-8L-Bjy" secondAttribute="trailing" constant="8" id="sg7-c0-uHz"/>
                                         <constraint firstAttribute="trailing" secondItem="TWL-9I-qgY" secondAttribute="trailing" constant="8" id="vED-0X-SQQ"/>
                                     </constraints>
@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="2920.8000000000002" y="810.94452773613204"/>
         </scene>
-        <!--Add Movie Popup Controller-->
+        <!--Add Movie Popover Controller-->
         <scene sceneID="aZu-ZG-iGT">
             <objects>
-                <viewController storyboardIdentifier="PopoverController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cne-r2-Y5L" customClass="AddMoviePopupController" customModule="Cinematic_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopoverController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cne-r2-Y5L" customClass="AddMoviePopoverController" customModule="Cinematic_Admin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFR-Km-oF1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -672,6 +672,7 @@
     </scenes>
     <resources>
         <image name="cinema" width="25" height="25"/>
+        <image name="loading" width="160" height="240"/>
         <image name="movie" width="23" height="21"/>
     </resources>
 </document>

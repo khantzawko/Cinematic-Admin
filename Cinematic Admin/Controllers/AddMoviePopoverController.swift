@@ -7,23 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 protocol MovieSelectionDelegate {
-    func didSelectMovie(movie: String, startDate: String, weeksInTheatre: Int)
+    func didSelectMovie(selectedMovie: Movie)
 }
 
-class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
-    let pickerViewTitles = ["Coco", "Wonder", "Thor", "IT"]
+    var selectedCinema = Cinema()
+    var selectedTheatre = Theatre()
+    var selectedMovie = Movie()
+    
+    var movieNames = [String]()
+    var movieImages = [String]()
+    var movieKeys = [String]()
     var weeks = [String]()
     
-    var selectedMovie = String()
-    var selectedWeeks = Int()
-    var selectedStartDateString = String()
     var selectedStartDate = Date()
     
+    var ref: DatabaseReference!
     var selectionDelegate: MovieSelectionDelegate?
     
     override func viewDidLoad() {
@@ -35,6 +40,53 @@ class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableVie
         for week in 1...12 {
             weeks.append(String(week))
         }
+        
+        getMovieData()
+    }
+    
+    func getMovieData() {
+        ref = Database.database().reference().child("movies")
+        ref.observe(DataEventType.childAdded, with: {(snapshot) in
+            
+            var postDict = snapshot.value as! [String : AnyObject]
+            
+            if let movieName = postDict["Name"], let movieImage = postDict["Image"]  {
+                self.movieNames.append(movieName as! String)
+                self.movieImages.append(movieImage as! String)
+                self.movieKeys.append(snapshot.key)
+            }
+            self.tableView.reloadData()
+        })
+    }
+    
+    func putMovieDataToTheatre(selectedMovie: Movie) {
+        ref = Database.database().reference()
+        let key = ref.childByAutoId().key
+        
+        let path = "cinema/\(selectedCinema.key!)/Theatre/\(selectedTheatre.key!)/MovieShowing/\(key)"
+        let post = ["Name": selectedMovie.name!,
+                    "Image": selectedMovie.image!,
+                    "StartDate": selectedMovie.startDate!,
+                    "WeeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
+        
+        let updateData = [path:post]
+        self.ref.updateChildValues(updateData)
+    }
+    
+    func putCinemaDataToMovie(selectedCinema: Cinema, selectedTheatre: Theatre, selectedMovie: Movie) {
+        ref = Database.database().reference()
+        let key = ref.childByAutoId().key
+        
+        let path = "movies/\(selectedMovie.key!)/CinemaShowing/\(key)"
+        let post = ["CinemaName": selectedCinema.name!,
+                    "TheatreName": selectedTheatre.name!,
+                    "Showtimes": selectedTheatre.showtimes!,
+                    "TheatreType": selectedTheatre.type!,
+                    "StartDate": selectedMovie.startDate!,
+                    "WeeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
+        
+        let updateData = [path:post]
+        self.ref.updateChildValues(updateData)
     }
 
     @IBAction func pressedCancel(_ sender: Any) {
@@ -60,17 +112,23 @@ class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableVie
         
         if dateFormatter.string(from: self.selectedStartDate) == "Friday" {
             dateFormatter.dateFormat = "dd-MMM-yyyy"
-            self.selectedStartDateString = dateFormatter.string(from: self.selectedStartDate)
+            selectedMovie.startDate = dateFormatter.string(from: self.selectedStartDate)
             
-            if self.selectedMovie.isEmpty && self.pickerViewTitles.count != 0 {
-                self.selectedMovie = self.pickerViewTitles[0]
+            if selectedMovie.name == nil && self.movieNames.count != 0 {
+                selectedMovie.key = self.movieKeys[0]
+                selectedMovie.name = self.movieNames[0]
+                selectedMovie.image = self.movieImages[0]
             }
             
-            if self.selectedWeeks == 0 && self.weeks.count != 0 {
-                self.selectedWeeks = Int(self.weeks[0])!
+            if selectedMovie.weeksInTheatre == nil && self.weeks.count != 0 {
+                selectedMovie.weeksInTheatre = Int(self.weeks[0])!
             }
             
-            selectionDelegate?.didSelectMovie(movie: self.selectedMovie, startDate: self.selectedStartDateString, weeksInTheatre: self.selectedWeeks)
+            // check for not duplicate starting date before put the data
+            putMovieDataToTheatre(selectedMovie: selectedMovie)
+            putCinemaDataToMovie(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
+            
+//            selectionDelegate?.didSelectMovie(selectedMovie: selectedMovie)
             
             self.dismiss(animated: true, completion: nil)
             
@@ -90,7 +148,7 @@ class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableVie
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag == 100 {
-            return pickerViewTitles.count
+            return movieNames.count
         } else if pickerView.tag == 101 {
             return weeks.count
         } else {
@@ -100,7 +158,7 @@ class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableVie
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView.tag == 100 {
-            return pickerViewTitles[row]
+            return movieNames[row]
         } else if pickerView.tag == 101 {
             return weeks[row] + (Int(weeks[row]) == 1 ? " week" : " weeks")
         } else {
@@ -110,9 +168,11 @@ class AddMoviePopupController: UIViewController, UITableViewDelegate, UITableVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 100 {
-            selectedMovie = pickerViewTitles[row]
+            selectedMovie.name = movieNames[row]
+            selectedMovie.image = movieImages[row]
+            selectedMovie.key = movieKeys[row]
         } else if pickerView.tag == 101 {
-            selectedWeeks = Int(weeks[row])!
+            selectedMovie.weeksInTheatre = Int(weeks[row])!
         }
     }
     

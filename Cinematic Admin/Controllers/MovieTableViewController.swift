@@ -43,6 +43,7 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
         movieInfo.delegate = self
         movieTrailer.delegate = self
         
+        movieImage.layer.cornerRadius = 10
         movieRating.keyboardType = .decimalPad
         movieTrailer.keyboardType = .URL
         
@@ -113,8 +114,7 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
             alertMessage(title: "Warning!", message: "Rating must be equal or less than 5.0")
         } else {
             alertMessage(title: "Complete!", message: "Uploaded Movie Data")
-            uploadMovieData()
-            //clearData()
+            putMovieData()
         }
     }
     
@@ -142,7 +142,7 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     
     // firebase function
     
-    func uploadMovieData() {
+    func putMovieData() {
         ref = Database.database().reference()
         let key = ref.childByAutoId().key
         let storageRef = Storage.storage().reference()

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A52018675B00B8394E /* AddMovieController.swift */; };
 		1411F8A8201867B700B8394E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A7201867B700B8394E /* MovieCell.swift */; };
-		1411F8AA20187A3F00B8394E /* AddMoviePopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */; };
+		1411F8AA20187A3F00B8394E /* AddMoviePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */; };
 		1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8AB20187AA300B8394E /* PopupMovieCell.swift */; };
 		141698F520154949006F69DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 141698F420154949006F69DC /* GoogleService-Info.plist */; };
 		1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD720106DC9005142E2 /* AppDelegate.swift */; };
@@ -23,6 +23,10 @@
 		146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2420183B0D000C8F37 /* AddCinemaController.swift */; };
 		146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2620183B67000C8F37 /* AddTheatreController.swift */; };
 		14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieTableViewController.swift */; };
+		14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D2F201A511400CA57E0 /* Extensions.swift */; };
+		14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D31201A63B800CA57E0 /* Movie.swift */; };
+		14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D33201A63CC00CA57E0 /* Cinema.swift */; };
+		14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D35201A63DD00CA57E0 /* Theatre.swift */; };
 		7BC00E542E0DD6F9A4F0D061 /* Pods_Cinematic_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C861AE371D49C6A1F3C4CFB9 /* Pods_Cinematic_Admin.framework */; };
 		A5EAE3652D2C576A69F9E792 /* Pods_Cinematic_AdminUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3862FFB75B93DFA50C2CB2F /* Pods_Cinematic_AdminUITests.framework */; };
 		E84B5A8AE72FADD94FD50926 /* Pods_Cinematic_AdminTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */; };
@@ -48,7 +52,7 @@
 /* Begin PBXFileReference section */
 		1411F8A52018675B00B8394E /* AddMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieController.swift; sourceTree = "<group>"; };
 		1411F8A7201867B700B8394E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoviePopupController.swift; sourceTree = "<group>"; };
+		1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoviePopoverController.swift; sourceTree = "<group>"; };
 		1411F8AB20187AA300B8394E /* PopupMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMovieCell.swift; sourceTree = "<group>"; };
 		141698F420154949006F69DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1468BCD420106DC9005142E2 /* Cinematic Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinematic Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +72,10 @@
 		146A2F2420183B0D000C8F37 /* AddCinemaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCinemaController.swift; sourceTree = "<group>"; };
 		146A2F2620183B67000C8F37 /* AddTheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTheatreController.swift; sourceTree = "<group>"; };
 		14B0A187201073D200029764 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		14BB2D2F201A511400CA57E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "Cinematic Admin/Supporting files/Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		14BB2D31201A63B800CA57E0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		14BB2D33201A63CC00CA57E0 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
+		14BB2D35201A63DD00CA57E0 /* Theatre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theatre.swift; sourceTree = "<group>"; };
 		2A5578DCA4F3EB59D87FDAA9 /* Pods-Cinematic AdminTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinematic_AdminTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D1EBBC49F2D348E3408BDB /* Pods-Cinematic AdminUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,8 +118,9 @@
 		140F44102014E93A003A20D6 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				141698F420154949006F69DC /* GoogleService-Info.plist */,
+				14BB2D2F201A511400CA57E0 /* Extensions.swift */,
 				1468BCD720106DC9005142E2 /* AppDelegate.swift */,
+				141698F420154949006F69DC /* GoogleService-Info.plist */,
 				1468BCDE20106DC9005142E2 /* Assets.xcassets */,
 				1468BCE020106DC9005142E2 /* LaunchScreen.storyboard */,
 				1468BCE320106DC9005142E2 /* Info.plist */,
@@ -122,6 +131,9 @@
 		1411F8A32018461400B8394E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				14BB2D33201A63CC00CA57E0 /* Cinema.swift */,
+				14BB2D35201A63DD00CA57E0 /* Theatre.swift */,
+				14BB2D31201A63B800CA57E0 /* Movie.swift */,
 				1411F8AB20187AA300B8394E /* PopupMovieCell.swift */,
 				1411F8A7201867B700B8394E /* MovieCell.swift */,
 				146A2F2020183A33000C8F37 /* CinemaCell.swift */,
@@ -137,7 +149,7 @@
 				146A2F2420183B0D000C8F37 /* AddCinemaController.swift */,
 				146A2F2620183B67000C8F37 /* AddTheatreController.swift */,
 				1411F8A52018675B00B8394E /* AddMovieController.swift */,
-				1411F8A920187A3F00B8394E /* AddMoviePopupController.swift */,
+				1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -500,13 +512,17 @@
 			files = (
 				146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */,
 				1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */,
+				14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */,
+				14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */,
+				14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */,
 				1411F8A8201867B700B8394E /* MovieCell.swift in Sources */,
 				14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */,
 				146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */,
 				1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */,
 				146A2F2120183A33000C8F37 /* CinemaCell.swift in Sources */,
-				1411F8AA20187A3F00B8394E /* AddMoviePopupController.swift in Sources */,
+				1411F8AA20187A3F00B8394E /* AddMoviePopoverController.swift in Sources */,
 				146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */,
+				14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */,
 				1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
