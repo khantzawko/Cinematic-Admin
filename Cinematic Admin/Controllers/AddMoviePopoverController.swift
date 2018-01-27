@@ -50,7 +50,7 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
             
             var postDict = snapshot.value as! [String : AnyObject]
             
-            if let movieName = postDict["Name"], let movieImage = postDict["Image"]  {
+            if let movieName = postDict["name"], let movieImage = postDict["image"]  {
                 self.movieNames.append(movieName as! String)
                 self.movieImages.append(movieImage as! String)
                 self.movieKeys.append(snapshot.key)
@@ -58,36 +58,7 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
             self.tableView.reloadData()
         })
     }
-    
-    func putMovieDataToTheatre(selectedMovie: Movie) {
-        ref = Database.database().reference()
-        let key = ref.childByAutoId().key
-        
-        let path = "cinema/\(selectedCinema.key!)/Theatre/\(selectedTheatre.key!)/MovieShowing/\(key)"
-        let post = ["Name": selectedMovie.name!,
-                    "Image": selectedMovie.image!,
-                    "StartDate": selectedMovie.startDate!,
-                    "WeeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
-        
-        let updateData = [path:post]
-        self.ref.updateChildValues(updateData)
-    }
-    
-    func putCinemaDataToMovie(selectedCinema: Cinema, selectedTheatre: Theatre, selectedMovie: Movie) {
-        ref = Database.database().reference()
-        let key = ref.childByAutoId().key
-        
-        let path = "movies/\(selectedMovie.key!)/CinemaShowing/\(key)"
-        let post = ["CinemaName": selectedCinema.name!,
-                    "TheatreName": selectedTheatre.name!,
-                    "Showtimes": selectedTheatre.showtimes!,
-                    "TheatreType": selectedTheatre.type!,
-                    "StartDate": selectedMovie.startDate!,
-                    "WeeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
-        
-        let updateData = [path:post]
-        self.ref.updateChildValues(updateData)
-    }
+
 
     @IBAction func pressedCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -125,8 +96,8 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
             }
             
             // check for not duplicate starting date before put the data
-            putMovieDataToTheatre(selectedMovie: selectedMovie)
-            putCinemaDataToMovie(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
+            putMovieDataToTheatre(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
+//            putCinemaDataToMovie(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
             
 //            selectionDelegate?.didSelectMovie(selectedMovie: selectedMovie)
             
@@ -138,6 +109,24 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    
+    func putMovieDataToTheatre(selectedCinema: Cinema, selectedTheatre: Theatre, selectedMovie: Movie) {
+        ref = Database.database().reference()
+        
+        let theatrePath = "theatres/\(selectedTheatre.key!)/movies/\(selectedMovie.key!)"
+        let theatrePost = ["movieID": selectedMovie.key!,
+                           "startDate": selectedMovie.startDate!,
+                           "weeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
+        
+        let moviePath = "movies/\(selectedMovie.key!)/theatres/\(selectedTheatre.key!)"
+        let moviePost = ["cinemaID": selectedCinema.key!,
+                         "theatreID": selectedTheatre.key!] as [String : Any]
+        
+        let updateData = [theatrePath:theatrePost,
+                          moviePath:moviePost]
+        self.ref.updateChildValues(updateData)
     }
     
     // pickerview functions

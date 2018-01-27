@@ -46,27 +46,32 @@ class AddTheatreController: UITableViewController {
         ref = Database.database().reference()
         let key = ref.childByAutoId().key
         
-        let path = "cinema/\(selectedCinema.key!)/Theatre/\(key)"
-        let post = ["Name": name,
-                    "TheatreType": type,
-                    "Showtimes": showtimes] as [String : Any]
+        let theatrePath = "theatres/\(key)"
+        let theatrePost = ["name": name,
+                    "theatreType": type,
+                    "showtimes": showtimes,
+                    "cinemaID": selectedCinema.key!] as [String : Any]
         
-        let updateData = [path:post]
+        let cinemaPath = "cinema/\(selectedCinema.key!)/\(theatrePath)"
+        let cinemaPost = ["theatreID": key] as [String : Any]
+        
+        let updateData = [theatrePath:theatrePost,
+                          cinemaPath:cinemaPost]
         self.ref.updateChildValues(updateData)
     }
     
     func getTheatreData() {
-        ref = Database.database().reference().child("cinema/\(selectedCinema.key!)/Theatre")
-        ref.observe(DataEventType.childAdded, with: {(snapshot) in
-            
+        ref = Database.database().reference()
+        let theatreQuery = ref.child("theatres/").queryOrdered(byChild: "cinemaID").queryEqual(toValue: selectedCinema.key!)
+        theatreQuery.observe(DataEventType.childAdded, with: {(snapshot) in
+
             var postDict = snapshot.value as! [String : AnyObject]
-            
-            if let theatreName = postDict["Name"], let theatreType = postDict["TheatreType"], let theatreShowtime = postDict["Showtimes"] {
+
+            if let theatreName = postDict["name"], let theatreType = postDict["theatreType"], let theatreShowtime = postDict["showtimes"] {
                 self.theatreKeys.append(snapshot.key)
                 self.theatreNames.append(theatreName as! String)
                 self.theatreShowtimes.append(theatreShowtime as! String)
                 self.theatreTypes.append(theatreType as! String)
-
             }
             self.tableView.reloadData()
         })

@@ -157,13 +157,13 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
                 } else {
                     self.downloadURL = (metadata?.downloadURL()?.absoluteString)!
                     let path = "movies/\(key)"
-                    let post = ["Name": self.movieName.text!,
-                                "Genre": self.movieGenre.text!,
-                                "Duration": self.selectedDuration,
-                                "Rating": Double(self.movieRating.text!)!,
-                                "Image": self.downloadURL,
-                                "Info": self.movieInfo.text!,
-                                "Trailer": self.movieTrailer.text!] as [String : Any]
+                    let post = ["name": self.movieName.text!,
+                                "genre": self.movieGenre.text!,
+                                "duration": self.selectedDuration,
+                                "rating": Double(self.movieRating.text!)!,
+                                "image": self.downloadURL,
+                                "info": self.movieInfo.text!,
+                                "trailer": self.movieTrailer.text!] as [String : Any]
                     
                     let updateData = [path:post]
                     self.ref.updateChildValues(updateData)

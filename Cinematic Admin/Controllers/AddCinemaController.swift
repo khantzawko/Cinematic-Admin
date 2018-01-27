@@ -46,10 +46,10 @@ class AddCinemaController: UITableViewController {
         let key = ref.childByAutoId().key
         
         let path = "cinema/\(key)"
-        let post = ["Name": name,
-                    "Phone": phone,
-                    "Location": location,
-                    "maxNoOfCinema": maxNoOfCinema] as [String : Any]
+        let post = ["name": name,
+                    "phone": phone,
+                    "location": location,
+                    "maxNo": maxNoOfCinema] as [String : Any]
         
         let updateData = [path:post]
         self.ref.updateChildValues(updateData)
@@ -61,7 +61,7 @@ class AddCinemaController: UITableViewController {
             
             var postDict = snapshot.value as! [String : AnyObject]
             
-            if let cinemaName = postDict["Name"], let cinamePhone = postDict["Phone"], let cinemaLocation = postDict["Location"], let cinemaMaxNo = postDict["maxNoOfCinema"]  {
+            if let cinemaName = postDict["name"], let cinamePhone = postDict["phone"], let cinemaLocation = postDict["location"], let cinemaMaxNo = postDict["maxNo"]  {
                 
                 self.cinemaKeys.append(snapshot.key)
                 self.cinemaNames.append(cinemaName as! String)
