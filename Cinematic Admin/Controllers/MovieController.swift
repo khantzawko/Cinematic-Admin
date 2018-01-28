@@ -18,9 +18,9 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieInfo: UITextView!
     @IBOutlet weak var movieTrailer: UITextField!
-
-    let identifiers = ["Name", "Genre", "Duration", "Rating", "Image", "Info", "Trailer"]
-    let heights: [CGFloat] = [75,75,140,75,167,167,75]
+    @IBOutlet weak var addMovieButton: UIButton!
+    
+    let heights: [CGFloat] = [75,75,140,75,167,167,75,62]
     var durationStringArray: [String] = [String]()
     var durationNumberArray: [Int] = [Int]()
     var selectedDuration: Int = Int()
@@ -43,9 +43,12 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
         movieInfo.delegate = self
         movieTrailer.delegate = self
         
-        movieImage.layer.cornerRadius = 10
+        movieImage.layer.cornerRadius = 5
         movieRating.keyboardType = .decimalPad
         movieTrailer.keyboardType = .URL
+        
+        addMovieButton.layer.cornerRadius = 10
+        addMovieButton.setTitle("Add Movie", for: .normal)
         
         textFields = [movieName, movieGenre, movieRating, movieTrailer]
         
@@ -92,7 +95,7 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
         self.present(image, animated: true, completion: nil)
     }
     
-    @IBAction func pressedDone(_ sender: Any) {
+    @IBAction func pressedAddMovie(_ sender: Any) {
         checkData()
     }
     
@@ -193,9 +196,8 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return heights.count
     }
-    
     
     // pickerview functions
     
