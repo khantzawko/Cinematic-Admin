@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
+class MovieController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate, UITextViewDelegate {
         
     @IBOutlet weak var movieName: UITextField!
     @IBOutlet weak var movieGenre: UITextField!
@@ -32,7 +32,7 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAround()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         movieDuration.delegate = self
@@ -176,7 +176,6 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     }
 
     
-    
     // imagepickerview function
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -218,15 +217,3 @@ class MovieTableViewController: UITableViewController, UIPickerViewDelegate, UIP
     }
 }
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-
-}

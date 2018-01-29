@@ -13,7 +13,7 @@ protocol MovieSelectionDelegate {
     func didSelectMovie(selectedMovie: Movie)
 }
 
-class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,13 +34,14 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.delegate = self
+//        tableView.dataSource = self
         
         for week in 1...12 {
             weeks.append(String(week))
         }
         
+        selectedMovie.weeksInTheatre = Int(weeks[0])
         getMovieData()
     }
     
@@ -90,14 +91,9 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
                 selectedMovie.name = self.movieNames[0]
                 selectedMovie.image = self.movieImages[0]
             }
-            
-            if selectedMovie.weeksInTheatre == nil && self.weeks.count != 0 {
-                selectedMovie.weeksInTheatre = Int(self.weeks[0])!
-            }
-            
+
             // check for not duplicate starting date before put the data
             putMovieDataToTheatre(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
-//            putCinemaDataToMovie(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
             
 //            selectionDelegate?.didSelectMovie(selectedMovie: selectedMovie)
             
@@ -177,19 +173,19 @@ class AddMoviePopoverController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseMovie", for: indexPath) as! PopupMovieCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseMovie", for: indexPath) as! PopoverMovieCell
             cell.chooseMovieLabel.text = "Choose Movie"
             cell.chooseMoviePickerView.tag = 100
             cell.chooseMoviePickerView.delegate = self
             cell.chooseMoviePickerView.dataSource = self
             return cell
         } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDate", for: indexPath) as! PopupMovieCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseDate", for: indexPath) as! PopoverMovieCell
             cell.chooseStartDateLabel.text = "Choose Start Date"
             cell.chooseStartDatePicker.addTarget(self, action: #selector(datePickerValueChanged), for: .valueChanged)
             return cell
         } else if indexPath.row == 2 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseWeeks", for: indexPath) as! PopupMovieCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChooseWeeks", for: indexPath) as! PopoverMovieCell
             cell.chooseWeeksLabel.text = "Weeks in Theatre"
             cell.chooseWeekPickerView.tag = 101
             cell.chooseWeekPickerView.delegate = self

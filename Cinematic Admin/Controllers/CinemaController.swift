@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AddCinemaController: UITableViewController {
+class CinemaController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     var cinemaKeys = [String]()
     var cinemaNames = [String]()
@@ -26,42 +26,25 @@ class AddCinemaController: UITableViewController {
     }
 
     @IBAction func pressedAddCinema(_ sender: Any) {
-        let alertController = UIAlertController(title: "Add Cinema", message: "Please type in the name of cinema", preferredStyle: .alert)
-        alertController.addTextField(configurationHandler: {(_ textField: UITextField) -> () in
-            textField.placeholder = "Cinema Name"
-        })
-        let addAction = UIAlertAction(title: "Add", style: .default, handler: {(_ action: UIAlertAction) -> () in
-            self.putCinemaData(name: alertController.textFields![0].text!, phone: "100", location: "Testing Location", maxNoOfCinema: 3)
-        })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(addAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    func putCinemaData(name: String, phone: String, location: String, maxNoOfCinema: Int) {
-        ref = Database.database().reference()
-        let key = ref.childByAutoId().key
-        
-        let path = "cinema/\(key)"
-        let post = ["name": name,
-                    "phone": phone,
-                    "location": location,
-                    "maxNo": maxNoOfCinema] as [String : Any]
-        
-        let updateData = [path:post]
-        self.ref.updateChildValues(updateData)
+        let cinemaPopoverController = storyboard?.instantiateViewController(withIdentifier: "CinemaPopoverController") as! CinemaPopoverController
+        cinemaPopoverController.modalPresentationStyle = .popover
+        if let popoverController = cinemaPopoverController.popoverPresentationController {
+            popoverController.permittedArrowDirections = .any
+            popoverController.delegate = self
+        }
+        present(cinemaPopoverController, animated: true, completion: nil)
     }
     
     func getCinemaData() {
         ref = Database.database().reference().child("cinema")
         ref.observe(DataEventType.childAdded, with: {(snapshot) in
             
-            var postDict = snapshot.value as! [String : AnyObject]
+            var cinemaDict = snapshot.value as! [String : AnyObject]
             
-            if let cinemaName = postDict["name"], let cinamePhone = postDict["phone"], let cinemaLocation = postDict["location"], let cinemaMaxNo = postDict["maxNo"]  {
+            if  let cinemaName = cinemaDict["name"],
+                let cinamePhone = cinemaDict["phone"],
+                let cinemaLocation = cinemaDict["location"],
+                let cinemaMaxNo = cinemaDict["maxNo"]  {
                 
                 self.cinemaKeys.append(snapshot.key)
                 self.cinemaNames.append(cinemaName as! String)
@@ -85,15 +68,16 @@ class AddCinemaController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CinemaCell", for: indexPath) as! CinemaCell
         cell.cinemaName.text = cinemaNames[indexPath.row]
+        cell.cinemaInfo.text = "\(cinemaPhones[indexPath.row]) • \(cinemaLocations[indexPath.row]) • \(cinemaMaxNoOfTheatres[indexPath.row])"
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAddTheatre" {
-            let atc: AddTheatreController = segue.destination as! AddTheatreController
+            let tc: TheatreController = segue.destination as! TheatreController
             let selectedRow = tableView.indexPathForSelectedRow?.row
             let selectedCinema = Cinema(key: cinemaKeys[selectedRow!], name: cinemaNames[selectedRow!], phone: cinemaPhones[selectedRow!], location: cinemaLocations[selectedRow!], maxNoOfTheatre: cinemaMaxNoOfTheatres[selectedRow!])
-            atc.selectedCinema = selectedCinema
+            tc.selectedCinema = selectedCinema
         }
     }
     

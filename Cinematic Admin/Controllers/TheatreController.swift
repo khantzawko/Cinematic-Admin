@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AddTheatreController: UITableViewController {
+class TheatreController: UITableViewController {
     
     var selectedCinema = Cinema()
     
@@ -94,12 +94,12 @@ class AddTheatreController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToAddMovie" {
-            let amc: AddMovieController = segue.destination as! AddMovieController
+            let mitc: MovieInTheatreController = segue.destination as! MovieInTheatreController
             let selectedRow = tableView.indexPathForSelectedRow?.row
             let selectedTheatre = Theatre(key: theatreKeys[selectedRow!], name: theatreNames[selectedRow!], showtimes: theatreShowtimes[selectedRow!], type: theatreTypes[selectedRow!])
             
-            amc.selectedCinema = selectedCinema
-            amc.selectedTheatre = selectedTheatre
+            mitc.selectedCinema = selectedCinema
+            mitc.selectedTheatre = selectedTheatre
         }
     }
 }

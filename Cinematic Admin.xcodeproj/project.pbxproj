@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A52018675B00B8394E /* AddMovieController.swift */; };
+		14028E6A201E6F320060565A /* PopoverCinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14028E69201E6F320060565A /* PopoverCinemaCell.swift */; };
+		14028E6C201E71D20060565A /* CinemaPopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14028E6B201E71D20060565A /* CinemaPopoverController.swift */; };
+		1411F8A62018675B00B8394E /* MovieInTheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A52018675B00B8394E /* MovieInTheatreController.swift */; };
 		1411F8A8201867B700B8394E /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A7201867B700B8394E /* MovieCell.swift */; };
-		1411F8AA20187A3F00B8394E /* AddMoviePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */; };
-		1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8AB20187AA300B8394E /* PopupMovieCell.swift */; };
+		1411F8AA20187A3F00B8394E /* MovieInTheatrePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8A920187A3F00B8394E /* MovieInTheatrePopoverController.swift */; };
+		1411F8AC20187AA300B8394E /* PopoverMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411F8AB20187AA300B8394E /* PopoverMovieCell.swift */; };
 		141698F520154949006F69DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 141698F420154949006F69DC /* GoogleService-Info.plist */; };
 		1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCD720106DC9005142E2 /* AppDelegate.swift */; };
 		1468BCDD20106DC9005142E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1468BCDB20106DC9005142E2 /* Main.storyboard */; };
@@ -20,9 +22,15 @@
 		1468BCF820106DC9005142E2 /* Cinematic_AdminUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1468BCF720106DC9005142E2 /* Cinematic_AdminUITests.swift */; };
 		146A2F2120183A33000C8F37 /* CinemaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2020183A33000C8F37 /* CinemaCell.swift */; };
 		146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2220183A96000C8F37 /* TheatreCell.swift */; };
-		146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2420183B0D000C8F37 /* AddCinemaController.swift */; };
-		146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2620183B67000C8F37 /* AddTheatreController.swift */; };
-		14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieTableViewController.swift */; };
+		146A2F2520183B0D000C8F37 /* CinemaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2420183B0D000C8F37 /* CinemaController.swift */; };
+		146A2F2720183B67000C8F37 /* TheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2620183B67000C8F37 /* TheatreController.swift */; };
+		1473D041201E4DB000494595 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473D040201E4DB000494595 /* DashboardController.swift */; };
+		1473D043201E4EF000494595 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473D042201E4EF000494595 /* DashboardCell.swift */; };
+		14B0A188201073D200029764 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieController.swift */; };
+		14B58FEA201F248400AB559C /* TheatreTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FE9201F248400AB559C /* TheatreTypeController.swift */; };
+		14B58FEC201F2B0300AB559C /* TheatreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FEB201F2B0300AB559C /* TheatreType.swift */; };
+		14B58FEE201F2BB800AB559C /* PopoverTheatreTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */; };
+		14B58FF2201F301A00AB559C /* TheatreTypePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FF1201F301A00AB559C /* TheatreTypePopoverController.swift */; };
 		14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D2F201A511400CA57E0 /* Extensions.swift */; };
 		14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D31201A63B800CA57E0 /* Movie.swift */; };
 		14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D33201A63CC00CA57E0 /* Cinema.swift */; };
@@ -50,10 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1411F8A52018675B00B8394E /* AddMovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieController.swift; sourceTree = "<group>"; };
+		14028E69201E6F320060565A /* PopoverCinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverCinemaCell.swift; sourceTree = "<group>"; };
+		14028E6B201E71D20060565A /* CinemaPopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaPopoverController.swift; sourceTree = "<group>"; };
+		1411F8A52018675B00B8394E /* MovieInTheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInTheatreController.swift; sourceTree = "<group>"; };
 		1411F8A7201867B700B8394E /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoviePopoverController.swift; sourceTree = "<group>"; };
-		1411F8AB20187AA300B8394E /* PopupMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupMovieCell.swift; sourceTree = "<group>"; };
+		1411F8A920187A3F00B8394E /* MovieInTheatrePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInTheatrePopoverController.swift; sourceTree = "<group>"; };
+		1411F8AB20187AA300B8394E /* PopoverMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverMovieCell.swift; sourceTree = "<group>"; };
 		141698F420154949006F69DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1468BCD420106DC9005142E2 /* Cinematic Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cinematic Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1468BCD720106DC9005142E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,9 +79,15 @@
 		1468BCF920106DC9005142E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		146A2F2020183A33000C8F37 /* CinemaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaCell.swift; sourceTree = "<group>"; };
 		146A2F2220183A96000C8F37 /* TheatreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreCell.swift; sourceTree = "<group>"; };
-		146A2F2420183B0D000C8F37 /* AddCinemaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCinemaController.swift; sourceTree = "<group>"; };
-		146A2F2620183B67000C8F37 /* AddTheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTheatreController.swift; sourceTree = "<group>"; };
-		14B0A187201073D200029764 /* MovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		146A2F2420183B0D000C8F37 /* CinemaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaController.swift; sourceTree = "<group>"; };
+		146A2F2620183B67000C8F37 /* TheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreController.swift; sourceTree = "<group>"; };
+		1473D040201E4DB000494595 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		1473D042201E4EF000494595 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		14B0A187201073D200029764 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		14B58FE9201F248400AB559C /* TheatreTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreTypeController.swift; sourceTree = "<group>"; };
+		14B58FEB201F2B0300AB559C /* TheatreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreType.swift; sourceTree = "<group>"; };
+		14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTheatreTypeCell.swift; sourceTree = "<group>"; };
+		14B58FF1201F301A00AB559C /* TheatreTypePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreTypePopoverController.swift; sourceTree = "<group>"; };
 		14BB2D2F201A511400CA57E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "Cinematic Admin/Supporting files/Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		14BB2D31201A63B800CA57E0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		14BB2D33201A63CC00CA57E0 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
@@ -131,10 +147,14 @@
 		1411F8A32018461400B8394E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				14BB2D31201A63B800CA57E0 /* Movie.swift */,
 				14BB2D33201A63CC00CA57E0 /* Cinema.swift */,
 				14BB2D35201A63DD00CA57E0 /* Theatre.swift */,
-				14BB2D31201A63B800CA57E0 /* Movie.swift */,
-				1411F8AB20187AA300B8394E /* PopupMovieCell.swift */,
+				14B58FEB201F2B0300AB559C /* TheatreType.swift */,
+				14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */,
+				1473D042201E4EF000494595 /* DashboardCell.swift */,
+				1411F8AB20187AA300B8394E /* PopoverMovieCell.swift */,
+				14028E69201E6F320060565A /* PopoverCinemaCell.swift */,
 				1411F8A7201867B700B8394E /* MovieCell.swift */,
 				146A2F2020183A33000C8F37 /* CinemaCell.swift */,
 				146A2F2220183A96000C8F37 /* TheatreCell.swift */,
@@ -145,11 +165,15 @@
 		1411F8A42018462200B8394E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				14B0A187201073D200029764 /* MovieTableViewController.swift */,
-				146A2F2420183B0D000C8F37 /* AddCinemaController.swift */,
-				146A2F2620183B67000C8F37 /* AddTheatreController.swift */,
-				1411F8A52018675B00B8394E /* AddMovieController.swift */,
-				1411F8A920187A3F00B8394E /* AddMoviePopoverController.swift */,
+				14B58FE9201F248400AB559C /* TheatreTypeController.swift */,
+				14B58FF1201F301A00AB559C /* TheatreTypePopoverController.swift */,
+				1473D040201E4DB000494595 /* DashboardController.swift */,
+				14B0A187201073D200029764 /* MovieController.swift */,
+				146A2F2420183B0D000C8F37 /* CinemaController.swift */,
+				14028E6B201E71D20060565A /* CinemaPopoverController.swift */,
+				146A2F2620183B67000C8F37 /* TheatreController.swift */,
+				1411F8A52018675B00B8394E /* MovieInTheatreController.swift */,
+				1411F8A920187A3F00B8394E /* MovieInTheatrePopoverController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -510,20 +534,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146A2F2520183B0D000C8F37 /* AddCinemaController.swift in Sources */,
-				1411F8A62018675B00B8394E /* AddMovieController.swift in Sources */,
+				146A2F2520183B0D000C8F37 /* CinemaController.swift in Sources */,
+				1411F8A62018675B00B8394E /* MovieInTheatreController.swift in Sources */,
 				14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */,
 				14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */,
+				14028E6C201E71D20060565A /* CinemaPopoverController.swift in Sources */,
 				14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */,
 				1411F8A8201867B700B8394E /* MovieCell.swift in Sources */,
-				14B0A188201073D200029764 /* MovieTableViewController.swift in Sources */,
+				1473D043201E4EF000494595 /* DashboardCell.swift in Sources */,
+				14B0A188201073D200029764 /* MovieController.swift in Sources */,
+				14028E6A201E6F320060565A /* PopoverCinemaCell.swift in Sources */,
+				1473D041201E4DB000494595 /* DashboardController.swift in Sources */,
 				146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */,
 				1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */,
 				146A2F2120183A33000C8F37 /* CinemaCell.swift in Sources */,
-				1411F8AA20187A3F00B8394E /* AddMoviePopoverController.swift in Sources */,
-				146A2F2720183B67000C8F37 /* AddTheatreController.swift in Sources */,
+				14B58FEE201F2BB800AB559C /* PopoverTheatreTypeCell.swift in Sources */,
+				14B58FF2201F301A00AB559C /* TheatreTypePopoverController.swift in Sources */,
+				1411F8AA20187A3F00B8394E /* MovieInTheatrePopoverController.swift in Sources */,
+				14B58FEC201F2B0300AB559C /* TheatreType.swift in Sources */,
+				146A2F2720183B67000C8F37 /* TheatreController.swift in Sources */,
+				14B58FEA201F248400AB559C /* TheatreTypeController.swift in Sources */,
 				14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */,
-				1411F8AC20187AA300B8394E /* PopupMovieCell.swift in Sources */,
+				1411F8AC20187AA300B8394E /* PopoverMovieCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

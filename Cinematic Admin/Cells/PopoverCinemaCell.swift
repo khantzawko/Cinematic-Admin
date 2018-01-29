@@ -10,15 +10,15 @@ import UIKit
 
 class PopoverCinemaCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    @IBOutlet weak var cinemaNameLabel: UILabel!
+    @IBOutlet weak var cinemaName: UITextField!
+    
+    @IBOutlet weak var cinemaPhoneLabel: UILabel!
+    @IBOutlet weak var cinemaPhone: UITextField!
+    
+    @IBOutlet weak var cinemaLocationLabel: UILabel!
+    @IBOutlet weak var cinemaLocation: UITextField!
+    
+    @IBOutlet weak var cinemaMaxTheatreLabel: UILabel!
+    @IBOutlet weak var maxTheatrePickerView: UIPickerView!
 }

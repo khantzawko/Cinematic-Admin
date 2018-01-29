@@ -16,5 +16,4 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var startDate: UILabel!
     @IBOutlet weak var showtimes: UILabel!
     @IBOutlet weak var weeksInTheatre: UILabel!
-
 }

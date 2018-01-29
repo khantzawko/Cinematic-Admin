@@ -11,5 +11,5 @@ import UIKit
 class CinemaCell: UITableViewCell {
 
     @IBOutlet weak var cinemaName: UILabel!
-
+    @IBOutlet weak var cinemaInfo: UILabel!
 }

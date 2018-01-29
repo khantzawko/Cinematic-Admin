@@ -9,7 +9,7 @@
 import UIKit
 
 class TheatreCell: UITableViewCell {
-
     @IBOutlet weak var theatreName: UILabel!
 
+    @IBOutlet weak var theatreType: UILabel!
 }

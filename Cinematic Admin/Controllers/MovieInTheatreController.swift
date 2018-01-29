@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class AddMovieController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class MovieInTheatreController: UITableViewController, UIPopoverPresentationControllerDelegate {
 
     var selectedCinema = Cinema()
     var selectedTheatre = Theatre()
@@ -32,7 +32,7 @@ class AddMovieController: UITableViewController, UIPopoverPresentationController
     }
 
     @IBAction func pressedAddMovie(_ sender: Any) {
-        let addMoviePopupController = storyboard?.instantiateViewController(withIdentifier: "PopoverController") as! AddMoviePopoverController
+        let addMoviePopupController = storyboard?.instantiateViewController(withIdentifier: "PopoverController") as! MovieInTheatrePopoverController
         
         addMoviePopupController.selectionDelegate = self
         
@@ -105,7 +105,7 @@ class AddMovieController: UITableViewController, UIPopoverPresentationController
     }
 }
 
-extension AddMovieController: MovieSelectionDelegate {
+extension MovieInTheatreController: MovieSelectionDelegate {
     func didSelectMovie(selectedMovie: Movie) {
 //        selectedMovieNames.append(selectedMovie.name!)
 //        selectedMovieImages.append(selectedMovie.image!)

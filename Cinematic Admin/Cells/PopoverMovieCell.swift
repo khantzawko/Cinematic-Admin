@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PopupMovieCell: UITableViewCell{
+class PopoverMovieCell: UITableViewCell{
 
     @IBOutlet weak var chooseMovieLabel: UILabel!
     @IBOutlet weak var chooseStartDateLabel: UILabel!
