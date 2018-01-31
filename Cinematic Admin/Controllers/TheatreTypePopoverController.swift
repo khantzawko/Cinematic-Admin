@@ -53,7 +53,7 @@ class TheatreTypePopoverController: UIViewController, UITableViewDelegate, UITab
         ref = Database.database().reference()
         let key = ref.childByAutoId().key
         
-        let path = "theatretype/\(key)"
+        let path = "theatretypes/\(key)"
         let post = ["name": name,
                     "typescript": typescript] as [String : Any]
         

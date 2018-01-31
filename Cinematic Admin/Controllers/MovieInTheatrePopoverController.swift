@@ -33,10 +33,7 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.delegate = self
-//        tableView.dataSource = self
-        
+
         for week in 1...12 {
             weeks.append(String(week))
         }
@@ -196,7 +193,7 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
         }
     }
     
-    @objc func datePickerValueChanged(sender: UIDatePicker) {
-        selectedStartDate = sender.date
+    @objc func datePickerValueChanged(datepicker: UIDatePicker) {
+        selectedStartDate = datepicker.date
     }
 }

@@ -9,14 +9,12 @@
 import UIKit
 import Firebase
 
-class TheatreController: UITableViewController {
+class TheatreController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     var selectedCinema = Cinema()
+    var theatres = [Theatre]()
     
-    var theatreKeys = [String]()
-    var theatreNames = [String]()
-    var theatreShowtimes = [String]()
-    var theatreTypes = [String]()
+    var showtimesString = String()
     
     var ref: DatabaseReference!
 
@@ -27,51 +25,33 @@ class TheatreController: UITableViewController {
     }
 
     @IBAction func pressedAddTheatre(_ sender: Any) {
-        let alertController = UIAlertController(title: "Add Theatre", message: "Please type in the name of theatre", preferredStyle: .alert)
-        alertController.addTextField(configurationHandler: {(_ textField: UITextField) -> () in
-            textField.placeholder = "Theatre Name"
-        })
-        let addAction = UIAlertAction(title: "Add", style: .default, handler: {(_ action: UIAlertAction) -> () in
-            self.putTheatreData(name: alertController.textFields![0].text!, type: "Type A", showtimes: "930, 1230, 1530, 1830, 2130")
-        })
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
-        
-        alertController.addAction(cancelAction)
-        alertController.addAction(addAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
-    
-    func putTheatreData(name: String, type: String, showtimes: String) {
-        ref = Database.database().reference()
-        let key = ref.childByAutoId().key
-        
-        let theatrePath = "theatres/\(key)"
-        let theatrePost = ["name": name,
-                    "theatreType": type,
-                    "showtimes": showtimes,
-                    "cinemaID": selectedCinema.key!] as [String : Any]
-        
-        let cinemaPath = "cinema/\(selectedCinema.key!)/\(theatrePath)"
-        let cinemaPost = ["theatreID": key] as [String : Any]
-        
-        let updateData = [theatrePath:theatrePost,
-                          cinemaPath:cinemaPost]
-        self.ref.updateChildValues(updateData)
+        let theatrePopoverController = storyboard?.instantiateViewController(withIdentifier: "TheatrePopoverController") as! TheatrePopoverController
+        theatrePopoverController.selectedCinema = selectedCinema
+        theatrePopoverController.modalPresentationStyle = .popover
+        if let popoverController = theatrePopoverController.popoverPresentationController {
+            popoverController.permittedArrowDirections = .any
+            popoverController.delegate = self
+        }
+        present(theatrePopoverController, animated: true, completion: nil)
     }
     
     func getTheatreData() {
         ref = Database.database().reference()
+        let theatreTypeRef = Database.database().reference().child("theatretypes")
+        
         let theatreQuery = ref.child("theatres/").queryOrdered(byChild: "cinemaID").queryEqual(toValue: selectedCinema.key!)
         theatreQuery.observe(DataEventType.childAdded, with: {(snapshot) in
 
             var postDict = snapshot.value as! [String : AnyObject]
 
-            if let theatreName = postDict["name"], let theatreType = postDict["theatreType"], let theatreShowtime = postDict["showtimes"] {
-                self.theatreKeys.append(snapshot.key)
-                self.theatreNames.append(theatreName as! String)
-                self.theatreShowtimes.append(theatreShowtime as! String)
-                self.theatreTypes.append(theatreType as! String)
+            if let theatreName = postDict["name"], let theatreTypeID = postDict["theatreTypeID"], let theatreShowtime = postDict["showtimes"] {
+                theatreTypeRef.child(theatreTypeID as! String).observe(DataEventType.value, with: {(snap) in
+                    var theatreTypeDict = snap.value as! [String : AnyObject]
+                    if let theatreTypeName = theatreTypeDict["name"] {
+                        self.theatres.append(Theatre(key: snapshot.key, name: theatreName as? String, showtimes: theatreShowtime as? [String], type: theatreTypeName as? String))
+                    }
+                    self.tableView.reloadData()
+                })
             }
             self.tableView.reloadData()
         })
@@ -79,16 +59,25 @@ class TheatreController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return theatreNames.count
+        return theatres.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 88
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TheatreCell", for: indexPath) as! TheatreCell
-        cell.theatreName.text = theatreNames[indexPath.row]
+        cell.theatreName.text = theatres[indexPath.row].name
+        cell.theatreType.text = "Type: \(theatres[indexPath.row].type!)"
+        
+        for index in (theatres[indexPath.row].showtimes)! {
+            showtimesString += index + ", "
+        }
+        
+        showtimesString.removeLast(2)
+        
+        cell.showtimes.text = "Showtimes: \((showtimesString))"
         return cell
     }
     
@@ -96,10 +85,10 @@ class TheatreController: UITableViewController {
         if segue.identifier == "ToAddMovie" {
             let mitc: MovieInTheatreController = segue.destination as! MovieInTheatreController
             let selectedRow = tableView.indexPathForSelectedRow?.row
-            let selectedTheatre = Theatre(key: theatreKeys[selectedRow!], name: theatreNames[selectedRow!], showtimes: theatreShowtimes[selectedRow!], type: theatreTypes[selectedRow!])
             
             mitc.selectedCinema = selectedCinema
-            mitc.selectedTheatre = selectedTheatre
+            mitc.selectedTheatre = theatres[selectedRow!]
+            mitc.showtimesString = showtimesString            
         }
     }
 }

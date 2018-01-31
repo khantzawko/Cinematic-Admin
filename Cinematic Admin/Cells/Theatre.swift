@@ -11,6 +11,6 @@ import Foundation
 struct Theatre {
     var key: String?
     var name: String?
-    var showtimes: String?
+    var showtimes: [String]?
     var type: String?
 }

@@ -26,6 +26,9 @@
 		146A2F2720183B67000C8F37 /* TheatreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146A2F2620183B67000C8F37 /* TheatreController.swift */; };
 		1473D041201E4DB000494595 /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473D040201E4DB000494595 /* DashboardController.swift */; };
 		1473D043201E4EF000494595 /* DashboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1473D042201E4EF000494595 /* DashboardCell.swift */; };
+		148C03782020C0E600BBB717 /* TheatrePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C03772020C0E600BBB717 /* TheatrePopoverController.swift */; };
+		148C037A2020C13700BBB717 /* PopoverTheatreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C03792020C13700BBB717 /* PopoverTheatreCell.swift */; };
+		148C037C2020C8FD00BBB717 /* ShowtimesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C037B2020C8FD00BBB717 /* ShowtimesCell.swift */; };
 		14B0A188201073D200029764 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieController.swift */; };
 		14B58FEA201F248400AB559C /* TheatreTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FE9201F248400AB559C /* TheatreTypeController.swift */; };
 		14B58FEC201F2B0300AB559C /* TheatreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FEB201F2B0300AB559C /* TheatreType.swift */; };
@@ -83,6 +86,9 @@
 		146A2F2620183B67000C8F37 /* TheatreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreController.swift; sourceTree = "<group>"; };
 		1473D040201E4DB000494595 /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
 		1473D042201E4EF000494595 /* DashboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCell.swift; sourceTree = "<group>"; };
+		148C03772020C0E600BBB717 /* TheatrePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatrePopoverController.swift; sourceTree = "<group>"; };
+		148C03792020C13700BBB717 /* PopoverTheatreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTheatreCell.swift; sourceTree = "<group>"; };
+		148C037B2020C8FD00BBB717 /* ShowtimesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowtimesCell.swift; sourceTree = "<group>"; };
 		14B0A187201073D200029764 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		14B58FE9201F248400AB559C /* TheatreTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreTypeController.swift; sourceTree = "<group>"; };
 		14B58FEB201F2B0300AB559C /* TheatreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreType.swift; sourceTree = "<group>"; };
@@ -155,6 +161,8 @@
 				1473D042201E4EF000494595 /* DashboardCell.swift */,
 				1411F8AB20187AA300B8394E /* PopoverMovieCell.swift */,
 				14028E69201E6F320060565A /* PopoverCinemaCell.swift */,
+				148C03792020C13700BBB717 /* PopoverTheatreCell.swift */,
+				148C037B2020C8FD00BBB717 /* ShowtimesCell.swift */,
 				1411F8A7201867B700B8394E /* MovieCell.swift */,
 				146A2F2020183A33000C8F37 /* CinemaCell.swift */,
 				146A2F2220183A96000C8F37 /* TheatreCell.swift */,
@@ -172,6 +180,7 @@
 				146A2F2420183B0D000C8F37 /* CinemaController.swift */,
 				14028E6B201E71D20060565A /* CinemaPopoverController.swift */,
 				146A2F2620183B67000C8F37 /* TheatreController.swift */,
+				148C03772020C0E600BBB717 /* TheatrePopoverController.swift */,
 				1411F8A52018675B00B8394E /* MovieInTheatreController.swift */,
 				1411F8A920187A3F00B8394E /* MovieInTheatrePopoverController.swift */,
 			);
@@ -538,12 +547,15 @@
 				1411F8A62018675B00B8394E /* MovieInTheatreController.swift in Sources */,
 				14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */,
 				14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */,
+				148C03782020C0E600BBB717 /* TheatrePopoverController.swift in Sources */,
 				14028E6C201E71D20060565A /* CinemaPopoverController.swift in Sources */,
 				14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */,
 				1411F8A8201867B700B8394E /* MovieCell.swift in Sources */,
 				1473D043201E4EF000494595 /* DashboardCell.swift in Sources */,
+				148C037C2020C8FD00BBB717 /* ShowtimesCell.swift in Sources */,
 				14B0A188201073D200029764 /* MovieController.swift in Sources */,
 				14028E6A201E6F320060565A /* PopoverCinemaCell.swift in Sources */,
+				148C037A2020C13700BBB717 /* PopoverTheatreCell.swift in Sources */,
 				1473D041201E4DB000494595 /* DashboardController.swift in Sources */,
 				146A2F2320183A96000C8F37 /* TheatreCell.swift in Sources */,
 				1468BCD820106DC9005142E2 /* AppDelegate.swift in Sources */,

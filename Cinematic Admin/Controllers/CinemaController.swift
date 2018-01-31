@@ -11,11 +11,9 @@ import Firebase
 
 class CinemaController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
-    var cinemaKeys = [String]()
-    var cinemaNames = [String]()
-    var cinemaPhones = [String]()
-    var cinemaLocations = [String]()
     var cinemaMaxNoOfTheatres = [Int]()
+    
+    var cinema = [Cinema]()
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
@@ -46,11 +44,7 @@ class CinemaController: UITableViewController, UIPopoverPresentationControllerDe
                 let cinemaLocation = cinemaDict["location"],
                 let cinemaMaxNo = cinemaDict["maxNo"]  {
                 
-                self.cinemaKeys.append(snapshot.key)
-                self.cinemaNames.append(cinemaName as! String)
-                self.cinemaPhones.append(cinamePhone as! String)
-                self.cinemaLocations.append(cinemaLocation as! String)
-                self.cinemaMaxNoOfTheatres.append(cinemaMaxNo as! Int)
+                self.cinema.append(Cinema(key: snapshot.key, name: cinemaName as? String, phone: cinamePhone as? String, location: cinemaLocation as? String, maxNoOfTheatre: cinemaMaxNo as? Int))
             }
             self.tableView.reloadData()
         })
@@ -58,7 +52,7 @@ class CinemaController: UITableViewController, UIPopoverPresentationControllerDe
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cinemaNames.count
+        return cinema.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -67,8 +61,8 @@ class CinemaController: UITableViewController, UIPopoverPresentationControllerDe
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CinemaCell", for: indexPath) as! CinemaCell
-        cell.cinemaName.text = cinemaNames[indexPath.row]
-        cell.cinemaInfo.text = "\(cinemaPhones[indexPath.row]) • \(cinemaLocations[indexPath.row]) • \(cinemaMaxNoOfTheatres[indexPath.row])"
+        cell.cinemaName.text = cinema[indexPath.row].name
+        cell.cinemaInfo.text = "\(cinema[indexPath.row].phone!) • \(cinema[indexPath.row].location!) • \(cinema[indexPath.row].maxNoOfTheatre!)"
         return cell
     }
     
@@ -76,7 +70,7 @@ class CinemaController: UITableViewController, UIPopoverPresentationControllerDe
         if segue.identifier == "ToAddTheatre" {
             let tc: TheatreController = segue.destination as! TheatreController
             let selectedRow = tableView.indexPathForSelectedRow?.row
-            let selectedCinema = Cinema(key: cinemaKeys[selectedRow!], name: cinemaNames[selectedRow!], phone: cinemaPhones[selectedRow!], location: cinemaLocations[selectedRow!], maxNoOfTheatre: cinemaMaxNoOfTheatres[selectedRow!])
+            let selectedCinema = cinema[selectedRow!]
             tc.selectedCinema = selectedCinema
         }
     }

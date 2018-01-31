@@ -35,7 +35,7 @@ class TheatreTypeController: UITableViewController, UIPopoverPresentationControl
     }
     
     func getTheatreTypeData() {
-        ref = Database.database().reference().child("theatretype")
+        ref = Database.database().reference().child("theatretypes")
         ref.observe(DataEventType.childAdded, with: {(snapshot) in
             
             var theatreTypeDict = snapshot.value as! [String : AnyObject]

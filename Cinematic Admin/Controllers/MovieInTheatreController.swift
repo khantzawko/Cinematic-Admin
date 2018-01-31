@@ -14,14 +14,12 @@ class MovieInTheatreController: UITableViewController, UIPopoverPresentationCont
     var selectedCinema = Cinema()
     var selectedTheatre = Theatre()
     
-//    var selectedMovieKeyInMovie = String()
-//    var selectedCinemaShowingKey = String()
-    
     var selectedMovieKeysInTheatre = [String]()
     var selectedMovieNames = [String]()
     var selectedMovieImages = [String]()
     var selectedStartDates = [String]()
     var selectedWeeks = [Int]()
+    var showtimesString = String()
     
     var ref: DatabaseReference!
     
@@ -53,12 +51,12 @@ class MovieInTheatreController: UITableViewController, UIPopoverPresentationCont
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        cell.movieImage.layer.cornerRadius = 10
+        cell.movieImage.layer.cornerRadius = 5
         cell.movieImage.downloadedFrom(link: selectedMovieImages[indexPath.row])
         cell.movieName.text = selectedMovieNames[indexPath.row]
-        cell.cinemaType.text = "Cinema Type: " + selectedTheatre.type!
+        cell.cinemaType.text = "Theatre Type: " + selectedTheatre.type!
         cell.startDate.text = "Start Date: \(selectedStartDates[indexPath.row])"
-        cell.showtimes.text = "Showtimes: " + selectedTheatre.showtimes!
+        cell.showtimes.text = "Showtimes: \(showtimesString)"
         cell.weeksInTheatre.text = "Weeks in Theatre: \(String(selectedWeeks[indexPath.row]) + (selectedWeeks[indexPath.row] == 1 ? " week" : " weeks"))"
         return cell
     }
