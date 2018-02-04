@@ -166,7 +166,9 @@ class MovieController: UITableViewController, UIPickerViewDelegate, UIPickerView
                                 "rating": Double(self.movieRating.text!)!,
                                 "image": self.downloadURL,
                                 "info": self.movieInfo.text!,
-                                "trailer": self.movieTrailer.text!] as [String : Any]
+                                "trailer": self.movieTrailer.text!,
+                                "startDate": "nil",
+                                "endDate": "nil"] as [String : Any]
                     
                     let updateData = [path:post]
                     self.ref.updateChildValues(updateData)

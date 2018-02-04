@@ -13,5 +13,6 @@ struct Movie {
     var name: String?
     var image: String?
     var startDate: String?
+    var endDate: String?
     var weeksInTheatre: Int?
 }

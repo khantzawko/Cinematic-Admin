@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-protocol MovieSelectionDelegate {
-    func didSelectMovie(selectedMovie: Movie)
-}
+//protocol MovieSelectionDelegate {
+//    func didSelectMovie(selectedMovie: Movie)
+//}
 
 class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -24,12 +24,15 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
     var movieNames = [String]()
     var movieImages = [String]()
     var movieKeys = [String]()
+    var movieStartDates = [String]()
+    var movieEndDates = [String]()
     var weeks = [String]()
     
     var selectedStartDate = Date()
+    var selectedStartDateString = String()
     
     var ref: DatabaseReference!
-    var selectionDelegate: MovieSelectionDelegate?
+//    var selectionDelegate: MovieSelectionDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +51,12 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
             
             var postDict = snapshot.value as! [String : AnyObject]
             
-            if let movieName = postDict["name"], let movieImage = postDict["image"]  {
+            if let movieName = postDict["name"], let movieImage = postDict["image"], let movieStartDate = postDict["startDate"], let movieEndDate = postDict["endDate"]  {
                 self.movieNames.append(movieName as! String)
                 self.movieImages.append(movieImage as! String)
                 self.movieKeys.append(snapshot.key)
+                self.movieStartDates.append(movieStartDate as! String)
+                self.movieEndDates.append(movieEndDate as! String)
             }
             self.tableView.reloadData()
         })
@@ -81,18 +86,43 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
         
         if dateFormatter.string(from: self.selectedStartDate) == "Friday" {
             dateFormatter.dateFormat = "dd-MMM-yyyy"
-            selectedMovie.startDate = dateFormatter.string(from: self.selectedStartDate)
+//            selectedMovie.startDate = dateFormatter.string(from: self.selectedStartDate)
+            selectedStartDateString = dateFormatter.string(from: self.selectedStartDate)
             
             if selectedMovie.name == nil && self.movieNames.count != 0 {
                 selectedMovie.key = self.movieKeys[0]
                 selectedMovie.name = self.movieNames[0]
                 selectedMovie.image = self.movieImages[0]
+                selectedMovie.startDate = self.movieStartDates[0]
+                selectedMovie.endDate = self.movieEndDates[0]
+            }
+            
+//            if selectedMovie.startDate == "nil" {
+//                print(selectedMovie.startDate)
+//            }
+            
+
+            if selectedMovie.startDate == "nil" {
+                selectedMovie.startDate = selectedStartDateString
+            } else if dateFormatter.date(from: selectedMovie.startDate!)! > selectedStartDate {
+                selectedMovie.startDate = selectedStartDateString
+            } else {
+                selectedMovie.startDate = selectedMovie.startDate
+            }
+
+            let selectedEndDateString = Date().getEndDateFromString(startDate: selectedMovie.startDate!, numOfWeek: selectedMovie.weeksInTheatre!)
+            let selectedEndDate = dateFormatter.date(from: selectedEndDateString)!
+
+            if selectedMovie.endDate == "nil" {
+                selectedMovie.endDate = selectedEndDateString
+            } else if dateFormatter.date(from: selectedMovie.endDate!)! < selectedEndDate {
+                selectedMovie.endDate = selectedEndDateString
+            } else {
+                selectedMovie.endDate = selectedMovie.endDate
             }
 
             // check for not duplicate starting date before put the data
             putMovieDataToTheatre(selectedCinema: selectedCinema, selectedTheatre: selectedTheatre, selectedMovie: selectedMovie)
-            
-//            selectionDelegate?.didSelectMovie(selectedMovie: selectedMovie)
             
             self.dismiss(animated: true, completion: nil)
             
@@ -110,16 +140,19 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
         
         let theatrePath = "theatres/\(selectedTheatre.key!)/movies/\(selectedMovie.key!)"
         let theatrePost = ["movieID": selectedMovie.key!,
-                           "startDate": selectedMovie.startDate!,
+                           "startDate": selectedStartDateString,
                            "weeksInTheatre": selectedMovie.weeksInTheatre!] as [String : Any]
         
-        let moviePath = "movies/\(selectedMovie.key!)/theatres/\(selectedTheatre.key!)"
-        let moviePost = ["cinemaID": selectedCinema.key!,
+        let movieTheatrePath = "movies/\(selectedMovie.key!)/theatres/\(selectedTheatre.key!)"
+        let movieTheatrePost = ["cinemaID": selectedCinema.key!,
                          "theatreID": selectedTheatre.key!] as [String : Any]
         
         let updateData = [theatrePath:theatrePost,
-                          moviePath:moviePost]
+                          movieTheatrePath:movieTheatrePost]
+        
         self.ref.updateChildValues(updateData)
+        self.ref.child("movies/\(selectedMovie.key!)/startDate").setValue(selectedMovie.startDate!)
+        self.ref.child("movies/\(selectedMovie.key!)/endDate").setValue(selectedMovie.endDate!)
     }
     
     // pickerview functions
@@ -153,6 +186,8 @@ class MovieInTheatrePopoverController: UIViewController, UITableViewDelegate, UI
             selectedMovie.name = movieNames[row]
             selectedMovie.image = movieImages[row]
             selectedMovie.key = movieKeys[row]
+            selectedMovie.startDate = movieStartDates[row]
+            selectedMovie.endDate = movieEndDates[row]
         } else if pickerView.tag == 101 {
             selectedMovie.weeksInTheatre = Int(weeks[row])!
         }

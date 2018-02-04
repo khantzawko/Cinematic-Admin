@@ -32,7 +32,7 @@ class MovieInTheatreController: UITableViewController, UIPopoverPresentationCont
     @IBAction func pressedAddMovie(_ sender: Any) {
         let addMoviePopupController = storyboard?.instantiateViewController(withIdentifier: "PopoverController") as! MovieInTheatrePopoverController
         
-        addMoviePopupController.selectionDelegate = self
+//        addMoviePopupController.selectionDelegate = self
         
         addMoviePopupController.selectedCinema = selectedCinema
         addMoviePopupController.selectedTheatre = selectedTheatre
@@ -103,11 +103,12 @@ class MovieInTheatreController: UITableViewController, UIPopoverPresentationCont
     }
 }
 
-extension MovieInTheatreController: MovieSelectionDelegate {
-    func didSelectMovie(selectedMovie: Movie) {
+//extension MovieInTheatreController: MovieSelectionDelegate {
+//    func didSelectMovie(selectedMovie: Movie) {
 //        selectedMovieNames.append(selectedMovie.name!)
 //        selectedMovieImages.append(selectedMovie.image!)
 //        selectedStartDates.append(selectedMovie.startDate!)
 //        selectedWeeks.append(selectedMovie.weeksInTheatre!)
-    }
-}
+//    }
+//}
+

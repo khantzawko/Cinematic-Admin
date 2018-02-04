@@ -40,5 +40,16 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    
+}
+
+extension Date {
+    func getEndDateFromString(startDate: String, numOfWeek: Int) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MMM-yyyy"
+        
+        let sDate = dateFormatter.date(from: startDate)!
+        let eDate = Calendar.current.date(byAdding: .day, value: (7*numOfWeek)-1, to: sDate)!
+        
+        return dateFormatter.string(from: eDate)
+    }
 }
