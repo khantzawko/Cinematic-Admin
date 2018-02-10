@@ -189,7 +189,6 @@ class MovieController: UITableViewController, UIPickerViewDelegate, UIPickerView
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     // tableview delegates
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

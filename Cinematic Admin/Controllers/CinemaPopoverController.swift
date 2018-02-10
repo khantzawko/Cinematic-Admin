@@ -70,8 +70,6 @@ class CinemaPopoverController: UIViewController, UITableViewDelegate, UITableVie
         self.ref.updateChildValues(updateData)
     }
     
-
-    
     // pickerview functions
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

@@ -31,13 +31,13 @@
 		148C037C2020C8FD00BBB717 /* ShowtimesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148C037B2020C8FD00BBB717 /* ShowtimesCell.swift */; };
 		14B0A188201073D200029764 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B0A187201073D200029764 /* MovieController.swift */; };
 		14B58FEA201F248400AB559C /* TheatreTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FE9201F248400AB559C /* TheatreTypeController.swift */; };
-		14B58FEC201F2B0300AB559C /* TheatreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FEB201F2B0300AB559C /* TheatreType.swift */; };
 		14B58FEE201F2BB800AB559C /* PopoverTheatreTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */; };
 		14B58FF2201F301A00AB559C /* TheatreTypePopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B58FF1201F301A00AB559C /* TheatreTypePopoverController.swift */; };
 		14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D2F201A511400CA57E0 /* Extensions.swift */; };
-		14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D31201A63B800CA57E0 /* Movie.swift */; };
-		14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D33201A63CC00CA57E0 /* Cinema.swift */; };
-		14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D35201A63DD00CA57E0 /* Theatre.swift */; };
+		14BB2D32201A63B800CA57E0 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BB2D31201A63B800CA57E0 /* Models.swift */; };
+		14FC9EE6202F597B00E70CAF /* OrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC9EE4202F597A00E70CAF /* OrderController.swift */; };
+		14FC9EE7202F597B00E70CAF /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC9EE5202F597A00E70CAF /* ScannerViewController.swift */; };
+		14FC9EEA202F7D6300E70CAF /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC9EE9202F7D6300E70CAF /* OrderCell.swift */; };
 		7BC00E542E0DD6F9A4F0D061 /* Pods_Cinematic_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C861AE371D49C6A1F3C4CFB9 /* Pods_Cinematic_Admin.framework */; };
 		A5EAE3652D2C576A69F9E792 /* Pods_Cinematic_AdminUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3862FFB75B93DFA50C2CB2F /* Pods_Cinematic_AdminUITests.framework */; };
 		E84B5A8AE72FADD94FD50926 /* Pods_Cinematic_AdminTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */; };
@@ -91,13 +91,13 @@
 		148C037B2020C8FD00BBB717 /* ShowtimesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowtimesCell.swift; sourceTree = "<group>"; };
 		14B0A187201073D200029764 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		14B58FE9201F248400AB559C /* TheatreTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreTypeController.swift; sourceTree = "<group>"; };
-		14B58FEB201F2B0300AB559C /* TheatreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreType.swift; sourceTree = "<group>"; };
 		14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTheatreTypeCell.swift; sourceTree = "<group>"; };
 		14B58FF1201F301A00AB559C /* TheatreTypePopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheatreTypePopoverController.swift; sourceTree = "<group>"; };
 		14BB2D2F201A511400CA57E0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "Cinematic Admin/Supporting files/Extensions.swift"; sourceTree = SOURCE_ROOT; };
-		14BB2D31201A63B800CA57E0 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		14BB2D33201A63CC00CA57E0 /* Cinema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema.swift; sourceTree = "<group>"; };
-		14BB2D35201A63DD00CA57E0 /* Theatre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theatre.swift; sourceTree = "<group>"; };
+		14BB2D31201A63B800CA57E0 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		14FC9EE4202F597A00E70CAF /* OrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderController.swift; sourceTree = "<group>"; };
+		14FC9EE5202F597A00E70CAF /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		14FC9EE9202F7D6300E70CAF /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		2A5578DCA4F3EB59D87FDAA9 /* Pods-Cinematic AdminTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminTests/Pods-Cinematic AdminTests.release.xcconfig"; sourceTree = "<group>"; };
 		3E46981A7BF41C81B3D3994C /* Pods_Cinematic_AdminTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinematic_AdminTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D1EBBC49F2D348E3408BDB /* Pods-Cinematic AdminUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinematic AdminUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinematic AdminUITests/Pods-Cinematic AdminUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,10 +153,8 @@
 		1411F8A32018461400B8394E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				14BB2D31201A63B800CA57E0 /* Movie.swift */,
-				14BB2D33201A63CC00CA57E0 /* Cinema.swift */,
-				14BB2D35201A63DD00CA57E0 /* Theatre.swift */,
-				14B58FEB201F2B0300AB559C /* TheatreType.swift */,
+				14BB2D31201A63B800CA57E0 /* Models.swift */,
+				14FC9EE9202F7D6300E70CAF /* OrderCell.swift */,
 				14B58FED201F2BB700AB559C /* PopoverTheatreTypeCell.swift */,
 				1473D042201E4EF000494595 /* DashboardCell.swift */,
 				1411F8AB20187AA300B8394E /* PopoverMovieCell.swift */,
@@ -212,6 +210,7 @@
 		1468BCD620106DC9005142E2 /* Cinematic Admin */ = {
 			isa = PBXGroup;
 			children = (
+				14FC9EE8202F598000E70CAF /* QRCodeScanner */,
 				1411F8A42018462200B8394E /* Controllers */,
 				1468BCDB20106DC9005142E2 /* Main.storyboard */,
 				1411F8A32018461400B8394E /* Cells */,
@@ -236,6 +235,15 @@
 				1468BCF920106DC9005142E2 /* Info.plist */,
 			);
 			path = "Cinematic AdminUITests";
+			sourceTree = "<group>";
+		};
+		14FC9EE8202F598000E70CAF /* QRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				14FC9EE5202F597A00E70CAF /* ScannerViewController.swift */,
+				14FC9EE4202F597A00E70CAF /* OrderController.swift */,
+			);
+			path = QRCodeScanner;
 			sourceTree = "<group>";
 		};
 		39D6406C1E48093C01217073 /* Frameworks */ = {
@@ -545,15 +553,15 @@
 			files = (
 				146A2F2520183B0D000C8F37 /* CinemaController.swift in Sources */,
 				1411F8A62018675B00B8394E /* MovieInTheatreController.swift in Sources */,
-				14BB2D34201A63CC00CA57E0 /* Cinema.swift in Sources */,
-				14BB2D36201A63DD00CA57E0 /* Theatre.swift in Sources */,
+				14FC9EEA202F7D6300E70CAF /* OrderCell.swift in Sources */,
 				148C03782020C0E600BBB717 /* TheatrePopoverController.swift in Sources */,
 				14028E6C201E71D20060565A /* CinemaPopoverController.swift in Sources */,
-				14BB2D32201A63B800CA57E0 /* Movie.swift in Sources */,
+				14BB2D32201A63B800CA57E0 /* Models.swift in Sources */,
 				1411F8A8201867B700B8394E /* MovieCell.swift in Sources */,
 				1473D043201E4EF000494595 /* DashboardCell.swift in Sources */,
 				148C037C2020C8FD00BBB717 /* ShowtimesCell.swift in Sources */,
 				14B0A188201073D200029764 /* MovieController.swift in Sources */,
+				14FC9EE6202F597B00E70CAF /* OrderController.swift in Sources */,
 				14028E6A201E6F320060565A /* PopoverCinemaCell.swift in Sources */,
 				148C037A2020C13700BBB717 /* PopoverTheatreCell.swift in Sources */,
 				1473D041201E4DB000494595 /* DashboardController.swift in Sources */,
@@ -563,7 +571,7 @@
 				14B58FEE201F2BB800AB559C /* PopoverTheatreTypeCell.swift in Sources */,
 				14B58FF2201F301A00AB559C /* TheatreTypePopoverController.swift in Sources */,
 				1411F8AA20187A3F00B8394E /* MovieInTheatrePopoverController.swift in Sources */,
-				14B58FEC201F2B0300AB559C /* TheatreType.swift in Sources */,
+				14FC9EE7202F597B00E70CAF /* ScannerViewController.swift in Sources */,
 				146A2F2720183B67000C8F37 /* TheatreController.swift in Sources */,
 				14B58FEA201F248400AB559C /* TheatreTypeController.swift in Sources */,
 				14BB2D30201A511400CA57E0 /* Extensions.swift in Sources */,

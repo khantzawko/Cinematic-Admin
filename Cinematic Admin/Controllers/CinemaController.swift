@@ -44,7 +44,7 @@ class CinemaController: UITableViewController, UIPopoverPresentationControllerDe
                 let cinemaLocation = cinemaDict["location"],
                 let cinemaMaxNo = cinemaDict["maxNo"]  {
                 
-                self.cinema.append(Cinema(key: snapshot.key, name: cinemaName as? String, phone: cinamePhone as? String, location: cinemaLocation as? String, maxNoOfTheatre: cinemaMaxNo as? Int))
+                self.cinema.append(Cinema(key: snapshot.key, name: cinemaName as? String, location: cinemaLocation as? String, phone: cinamePhone as? String, maxNoOfTheatre: cinemaMaxNo as? Int))
             }
             self.tableView.reloadData()
         })

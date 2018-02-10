@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,21 +19,80 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Scan-->
+        <!--Scanner View Controller-->
         <scene sceneID="0AK-4t-4Yh">
             <objects>
-                <viewController id="UeE-2x-o2K" sceneMemberID="viewController">
+                <viewController id="UeE-2x-o2K" customClass="ScannerViewController" customModule="Cinematic_Admin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsg-aT-gj0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="hhU-Kg-hvZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan" id="Q2J-dI-xuM"/>
+                    <navigationItem key="navigationItem" id="iVq-Rf-8gr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMF-8R-7lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="633"/>
+            <point key="canvasLocation" x="710" y="632"/>
+        </scene>
+        <!--Order Controller-->
+        <scene sceneID="KIL-YE-zE7">
+            <objects>
+                <viewController storyboardIdentifier="OrderController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EYl-uS-emJ" customClass="OrderController" customModule="Cinematic_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oe9-Wa-ouH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USP-Yw-xG4">
+                                <rect key="frame" x="337" y="20" width="30" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="✕"/>
+                                <connections>
+                                    <action selector="pressedClose:" destination="EYl-uS-emJ" eventType="touchUpInside" id="nEB-WX-8Ss"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="136" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PaJ-5z-0eL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" id="sih-FU-PtE" customClass="OrderCell" customModule="Cinematic_Admin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="136"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sih-FU-PtE" id="KkH-gO-iuN">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="135.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Purchased Tickets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VmF-lj-7kJ">
+                                <rect key="frame" x="16" y="24" width="213" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PaJ-5z-0eL" firstAttribute="leading" secondItem="YgG-Jz-WJ7" secondAttribute="leading" id="4Al-JM-gqG"/>
+                            <constraint firstItem="YgG-Jz-WJ7" firstAttribute="bottom" secondItem="PaJ-5z-0eL" secondAttribute="bottom" id="DKZ-eW-j6p"/>
+                            <constraint firstItem="VmF-lj-7kJ" firstAttribute="firstBaseline" secondItem="USP-Yw-xG4" secondAttribute="baseline" constant="2" id="Dxe-VT-XK0"/>
+                            <constraint firstItem="YgG-Jz-WJ7" firstAttribute="trailing" secondItem="USP-Yw-xG4" secondAttribute="trailing" constant="8" id="RNE-sJ-RCD"/>
+                            <constraint firstItem="YgG-Jz-WJ7" firstAttribute="trailing" secondItem="PaJ-5z-0eL" secondAttribute="trailing" id="iL5-oY-OEx"/>
+                            <constraint firstItem="VmF-lj-7kJ" firstAttribute="leading" secondItem="oe9-Wa-ouH" secondAttribute="leadingMargin" id="nwA-E9-Kya"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VmF-lj-7kJ" secondAttribute="trailingMargin" id="qdi-27-8cV"/>
+                            <constraint firstItem="PaJ-5z-0eL" firstAttribute="top" secondItem="USP-Yw-xG4" secondAttribute="bottom" constant="8" id="rc7-9e-BzF"/>
+                            <constraint firstItem="USP-Yw-xG4" firstAttribute="top" secondItem="YgG-Jz-WJ7" secondAttribute="top" id="tgh-WF-KVl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YgG-Jz-WJ7"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PaJ-5z-0eL" id="kQn-kc-DGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DfL-PY-5Yc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709.60000000000002" y="1351.5742128935533"/>
         </scene>
         <!--Cinema-->
         <scene sceneID="7vK-YP-5Se">
@@ -457,7 +518,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="dXG-q8-RYm" kind="relationship" relationship="viewControllers" id="Ac6-zw-4Mq"/>
-                        <segue destination="UeE-2x-o2K" kind="relationship" relationship="viewControllers" id="iJV-Cm-GVP"/>
+                        <segue destination="Afi-Yt-qJg" kind="relationship" relationship="viewControllers" id="iJV-Cm-GVP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyi-jv-Im4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1092,7 +1153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDZ-bP-p2V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1497" y="633"/>
+            <point key="canvasLocation" x="1836" y="632.83358320839591"/>
         </scene>
         <!--Theatre Type Popover Controller-->
         <scene sceneID="DbQ-Td-yuf">
@@ -1217,7 +1278,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leZ-r2-NTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273" y="633"/>
+            <point key="canvasLocation" x="2612" y="632.83358320839591"/>
         </scene>
         <!--Theatre Popover Controller-->
         <scene sceneID="sxM-5i-YB9">
@@ -1439,6 +1500,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRo-oK-5V4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2272.8000000000002" y="-898.2008995502249"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="cca-Dh-tFs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Afi-Yt-qJg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan" id="Q2J-dI-xuM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8l7-c0-t5h">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UeE-2x-o2K" kind="relationship" relationship="rootViewController" id="yYL-in-DFd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWp-U1-puR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19.199999999999999" y="632.38380809595208"/>
         </scene>
     </scenes>
     <resources>
