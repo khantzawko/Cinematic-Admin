@@ -24,7 +24,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        navigationItem.title = "Scanner"
+        navigationItem.title = "Scan Ticket"
         view.backgroundColor = .white
         
         navigationController?.navigationBar.prefersLargeTitles = true

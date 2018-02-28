@@ -896,7 +896,7 @@
         <scene sceneID="D7m-JV-qbn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXG-q8-RYm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="k7M-dE-Z7v"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="editor" id="k7M-dE-Z7v"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jqQ-D1-zp6">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1505,7 +1505,7 @@
         <scene sceneID="cca-Dh-tFs">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Afi-Yt-qJg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan" id="Q2J-dI-xuM"/>
+                    <tabBarItem key="tabBarItem" title="Scan" image="qrcode" id="Q2J-dI-xuM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8l7-c0-t5h">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -1522,6 +1522,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="editor" width="24" height="24"/>
         <image name="loading" width="160" height="240"/>
+        <image name="qrcode" width="21" height="21"/>
     </resources>
 </document>
