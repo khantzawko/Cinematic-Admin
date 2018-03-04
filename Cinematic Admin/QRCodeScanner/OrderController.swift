@@ -36,7 +36,8 @@ class OrderController: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = OrderCell.init(style: .default, reuseIdentifier: "OrderCell")
         cell.movieName.text = movies[indexPath.row].name
-        cell.ticketInfo.text = ("\(cinemas[indexPath.row].name!) - \(receipts[indexPath.row].ticketInfo!)")
+        cell.movieImage.downloadedFrom(link: movies[indexPath.row].image!)
+        cell.ticketInfo.text = ("\(cinemas[indexPath.row].name!) - Seats (\(receipts[indexPath.row].seatInfo!))")
         cell.movieDate.text = receipts[indexPath.row].movieTime
         cell.purchasedDate.text = receipts[indexPath.row].purchasedDate
         cell.orderEmail.text = receipts[indexPath.row].email
@@ -61,6 +62,7 @@ class OrderController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 let receiptPurchasedDate = postDict["purchasedDate"],
                 let receiptCode = postDict["receiptCode"],
                 let receiptTicketInfo = postDict["ticketInfo"],
+                let receiptSeatInfo = postDict["seatInfo"],
                 let movieTime = postDict["movieTime"],
                 let movieKey = postDict["movieID"],
                 let cinemaKey = postDict["cinemaID"] {
@@ -71,6 +73,7 @@ class OrderController: UIViewController, UITableViewDelegate, UITableViewDataSou
                                              purchasedDate: receiptPurchasedDate as! String,
                                              receiptCode: receiptCode as! String,
                                              ticketInfo: receiptTicketInfo as! String,
+                                             seatInfo: receiptSeatInfo as! String,
                                              movieTime: movieTime as! String,
                                              movieID: movieKey as! String,
                                              cinemaID: cinemaKey as! String))
@@ -101,7 +104,6 @@ class OrderController: UIViewController, UITableViewDelegate, UITableViewDataSou
                     }
                     self.tableView.reloadData()
                 })
-                print(self.receipts)
             }
         })
     }

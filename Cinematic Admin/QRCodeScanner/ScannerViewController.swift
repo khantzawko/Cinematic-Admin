@@ -22,8 +22,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
         navigationItem.title = "Scan Ticket"
         view.backgroundColor = .white
         
@@ -65,6 +66,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         codeLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         codeLabel.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
     }
+//    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        
+//    }
 
     let codeLabel:UILabel = {
         let codeLabel = UILabel()
